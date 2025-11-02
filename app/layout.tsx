@@ -23,6 +23,7 @@ export const metadata: Metadata = {
     "visual studio code",
     "theme generator",
   ],
+  metadataBase: new URL("https://www.themecraft.top/"),
   authors: [{ name: "SymphoneIceAttack" }],
   creator: "SymphoneIceAttack",
   publisher: "SymphoneIceAttack",

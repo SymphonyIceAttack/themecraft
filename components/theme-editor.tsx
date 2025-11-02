@@ -5,6 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { normalizeColor } from "@/lib/color-utils";
 import type { TokenColor, VSCodeTheme } from "@/types/theme";
 
 interface ThemeEditorProps {
@@ -123,6 +124,8 @@ function ColorInput({
   value: string;
   onChange: (value: string) => void;
 }) {
+  const normalizedValue = normalizeColor(value);
+
   return (
     <div className="flex items-center gap-3">
       <div className="flex-1">
@@ -138,7 +141,7 @@ function ColorInput({
         <Label className="text-xs text-muted-foreground">Color</Label>
         <input
           type="color"
-          value={value}
+          value={normalizedValue}
           onChange={(e) => onChange(e.target.value)}
           className="w-12 h-10 rounded border border-border cursor-pointer"
         />

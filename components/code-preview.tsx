@@ -9,6 +9,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { CODE_EXAMPLES } from "@/lib/code-examples";
+import { isValidColor, normalizeColor } from "@/lib/color-utils";
 import type { TokenColor, VSCodeTheme } from "@/types/theme";
 
 interface CodePreviewProps {
@@ -24,7 +25,9 @@ export function CodePreview({ theme }: CodePreviewProps) {
     const token = theme.tokenColors.find((t: TokenColor) =>
       t.scope.some((s: string) => s.includes(scope)),
     );
-    return token?.settings.foreground || theme.colors["editor.foreground"];
+    const color =
+      token?.settings.foreground || theme.colors["editor.foreground"];
+    return isValidColor(color) ? normalizeColor(color) : "#d4d4d4";
   };
 
   const highlightLine = (line: string): string => {
@@ -62,14 +65,38 @@ export function CodePreview({ theme }: CodePreviewProps) {
 
   const lines = currentExample.code.split("\n");
 
+  const editorBg = normalizeColor(
+    theme.colors["editor.background"] || "#1e1e1e",
+  );
+  const editorFg = normalizeColor(
+    theme.colors["editor.foreground"] || "#d4d4d4",
+  );
+  const titleBarBg = normalizeColor(
+    theme.colors["titleBar.activeBackground"] || "#1e1e1e",
+  );
+  const titleBarFg = normalizeColor(
+    theme.colors["titleBar.activeForeground"] || "#cccccc",
+  );
+  const lineNumberBg = normalizeColor(
+    theme.colors["editorLineNumber.background"] || "transparent",
+  );
+  const lineNumberFg = normalizeColor(
+    theme.colors["editorLineNumber.foreground"] || "#858585",
+  );
+  const statusBarBg = normalizeColor(
+    theme.colors["statusBar.background"] || "#007acc",
+  );
+  const statusBarFg = normalizeColor(
+    theme.colors["statusBar.foreground"] || "#ffffff",
+  );
+
   return (
     <div className="h-full flex flex-col rounded-lg overflow-hidden border border-border">
       <div
         className="flex items-center justify-between px-4 py-2 border-b"
         style={{
-          backgroundColor:
-            theme.colors["titleBar.activeBackground"] || "#1e1e1e",
-          color: theme.colors["titleBar.activeForeground"] || "#cccccc",
+          backgroundColor: titleBarBg,
+          color: titleBarFg,
         }}
       >
         <div className="flex items-center gap-2">
@@ -106,17 +133,16 @@ export function CodePreview({ theme }: CodePreviewProps) {
       <div
         className="flex-1 overflow-auto font-mono text-sm"
         style={{
-          backgroundColor: theme.colors["editor.background"] || "#1e1e1e",
-          color: theme.colors["editor.foreground"] || "#d4d4d4",
+          backgroundColor: editorBg,
+          color: editorFg,
         }}
       >
         <div className="flex">
           <div
             className="select-none px-4 py-4 text-right"
             style={{
-              backgroundColor:
-                theme.colors["editorLineNumber.background"] || "transparent",
-              color: theme.colors["editorLineNumber.foreground"] || "#858585",
+              backgroundColor: lineNumberBg,
+              color: lineNumberFg,
             }}
           >
             {lines.map((_, i) => (
@@ -143,8 +169,8 @@ export function CodePreview({ theme }: CodePreviewProps) {
       <div
         className="flex items-center justify-between px-4 py-1 text-xs border-t"
         style={{
-          backgroundColor: theme.colors["statusBar.background"] || "#007acc",
-          color: theme.colors["statusBar.foreground"] || "#ffffff",
+          backgroundColor: statusBarBg,
+          color: statusBarFg,
         }}
       >
         <div className="flex gap-4">
