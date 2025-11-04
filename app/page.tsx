@@ -1,6 +1,7 @@
 "use client";
 
-import { Code2, Download } from "lucide-react";
+import { BookOpen, Code2, Download } from "lucide-react";
+import Link from "next/link";
 import { useState } from "react";
 import { CodePreview } from "@/components/code-preview";
 import { ExportDialog } from "@/components/export-dialog";
@@ -80,10 +81,19 @@ export default function Home() {
               </p>
             </div>
           </div>
-          <Button onClick={() => setShowExport(true)} className="gap-2">
-            <Download className="w-4 h-4" />
-            Export Theme
-          </Button>
+          <div className="flex items-center gap-3">
+            <Link
+              href="/blog"
+              className="flex items-center gap-2 px-4 py-2 rounded-md text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-accent transition-all duration-200 hover:scale-105"
+            >
+              <BookOpen className="w-4 h-4" />
+              Blog
+            </Link>
+            <Button onClick={() => setShowExport(true)} className="gap-2">
+              <Download className="w-4 h-4" />
+              Export Theme
+            </Button>
+          </div>
         </div>
       </header>
 
