@@ -31,20 +31,38 @@ export function CodePreview({ theme }: CodePreviewProps) {
   };
 
   const highlightLine = (line: string): string => {
+    // First escape HTML special characters
     let result = line
       .replace(/&/g, "&amp;")
       .replace(/</g, "&lt;")
       .replace(/>/g, "&gt;");
 
+    // Use a placeholder system to prevent re-processing
+    const placeholders: string[] = [];
+    let placeholderIndex = 0;
+
+    const addPlaceholder = (content: string): string => {
+      const placeholder = `__PLACEHOLDER_${placeholderIndex}__`;
+      placeholders[placeholderIndex] = content;
+      placeholderIndex++;
+      return placeholder;
+    };
+
+    // Process patterns in order, replacing matches with placeholders
     const patterns = [
+      // Strings first (highest priority)
       { regex: /(['"`])((?:\\.|(?!\1).)*?)\1/g, color: getColor("string") },
+      // Comments
       { regex: /\/\/.*/g, color: getColor("comment"), italic: true },
+      // Keywords
       {
         regex:
           /\b(import|export|from|const|let|var|function|return|if|else|interface|type|class|async|await|try|catch|finally|default|package|public|private|protected|static|void|int|string|bool|struct|func|impl|use|fn|mut|pub|namespace|using|def|end|do|require|module)\b/g,
         color: getColor("keyword"),
       },
+      // Numbers
       { regex: /\b(\d+)\b/g, color: getColor("constant.numeric") },
+      // React hooks
       {
         regex: /\b(useState|useEffect|useCallback|useMemo|useRef)\b/g,
         color: getColor("entity.name.function"),
@@ -56,8 +74,14 @@ export function CodePreview({ theme }: CodePreviewProps) {
         const style = italic
           ? `color: ${color}; font-style: italic;`
           : `color: ${color}`;
-        return `<span style="${style}">${match}</span>`;
+        const span = `<span style="${style}">${match}</span>`;
+        return addPlaceholder(span);
       });
+    });
+
+    // Replace all placeholders with actual content
+    placeholders.forEach((content, index) => {
+      result = result.replace(`__PLACEHOLDER_${index}__`, content);
     });
 
     return result;

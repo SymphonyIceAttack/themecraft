@@ -4,20 +4,30 @@
 export function normalizeColor(color: string | undefined): string {
   if (!color) return "#000000";
 
-  // Remove whitespace
   const trimmed = color.trim();
 
-  // Already hex format
+  // Already valid 6-digit hex format
   if (/^#[0-9A-Fa-f]{6}$/.test(trimmed)) {
-    return trimmed;
+    return trimmed.toUpperCase();
   }
 
-  // Short hex format (#RGB)
+  // Short hex format (#RGB) - expand to #RRGGBB
   if (/^#[0-9A-Fa-f]{3}$/.test(trimmed)) {
     const r = trimmed[1];
     const g = trimmed[2];
     const b = trimmed[3];
-    return `#${r}${r}${g}${g}${b}${b}`;
+    return `#${r}${r}${g}${g}${b}${b}`.toUpperCase();
+  }
+
+  if (/^#[0-9A-Fa-f]+$/.test(trimmed)) {
+    const hexPart = trimmed.slice(1);
+    if (hexPart.length < 6) {
+      // Pad with zeros if too short
+      return `#${hexPart.padEnd(6, "0")}`.toUpperCase();
+    } else if (hexPart.length > 6) {
+      // Truncate if too long
+      return `#${hexPart.slice(0, 6)}`.toUpperCase();
+    }
   }
 
   // RGB format: rgb(255, 0, 0) or rgb(255,0,0)
@@ -42,14 +52,16 @@ export function normalizeColor(color: string | undefined): string {
     return rgbToHex(r, g, b);
   }
 
-  // If it's just numbers, treat as invalid
   if (/^\d+$/.test(trimmed)) {
-    console.warn(`[v0] Invalid color format (pure numbers): ${trimmed}`);
-    return "#000000";
+    const padded = trimmed.padEnd(6, "0").slice(0, 6);
+    console.warn(
+      `[v0] Converting pure numbers to hex: ${trimmed} -> #${padded}`,
+    );
+    return `#${padded}`.toUpperCase();
   }
 
-  // Return as-is if we can't parse it (might be a valid CSS color name)
-  return trimmed;
+  console.warn(`[v0] Invalid color format, using fallback: ${trimmed}`);
+  return "#000000";
 }
 
 /**

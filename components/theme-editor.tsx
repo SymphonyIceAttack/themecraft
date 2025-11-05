@@ -125,16 +125,44 @@ function ColorInput({
   onChange: (value: string) => void;
 }) {
   const normalizedValue = normalizeColor(value);
+  const wasNormalized = value !== normalizedValue && value.trim() !== "";
 
   return (
     <div className="flex items-center gap-3">
       <div className="flex-1">
-        <Label className="text-sm text-muted-foreground">{label}</Label>
+        <Label className="text-sm text-muted-foreground">
+          {label}
+          {wasNormalized && (
+            <span
+              className="ml-2 text-xs text-amber-500"
+              title={`Original: ${value}`}
+            >
+              (auto-fixed)
+            </span>
+          )}
+        </Label>
         <Input
           type="text"
-          value={value}
-          onChange={(e) => onChange(e.target.value)}
+          value={normalizedValue}
+          onChange={(e) => {
+            const inputValue = e.target.value;
+            if (
+              /^[0-9A-Fa-f]+$/.test(inputValue) &&
+              !inputValue.startsWith("#")
+            ) {
+              onChange(`#${inputValue}`);
+            } else {
+              onChange(inputValue);
+            }
+          }}
+          onBlur={(e) => {
+            const normalized = normalizeColor(e.target.value);
+            if (normalized !== e.target.value) {
+              onChange(normalized);
+            }
+          }}
           className="mt-1 font-mono text-sm"
+          placeholder="#000000"
         />
       </div>
       <div className="flex flex-col items-center gap-1">
@@ -144,6 +172,7 @@ function ColorInput({
           value={normalizedValue}
           onChange={(e) => onChange(e.target.value)}
           className="w-12 h-10 rounded border border-border cursor-pointer"
+          title={`Current: ${normalizedValue}`}
         />
       </div>
     </div>
