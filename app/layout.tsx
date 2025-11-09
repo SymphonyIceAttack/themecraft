@@ -10,37 +10,40 @@ const _geist = Geist({ subsets: ["latin"] });
 const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "VSCode Theme Editor - Create & Export Custom Themes",
+  title:
+    "Code Theme Editor - Create & Export Themes for VSCode, Cursor, Zed, Neovim & Helix",
   description:
-    "Online VSCode theme editor with live preview. Create, customize, and export beautiful Visual Studio Code color themes in JSON format. Support for multiple programming languages.",
+    "Universal code editor theme creator with live preview. Create, customize, and export beautiful color themes for VSCode, Cursor, Zed, Neovim, and Helix. Support for multiple programming languages and formats (JSON, Lua, TOML).",
   keywords: [
-    "vscode",
-    "theme",
-    "editor",
-    "color scheme",
+    "code editor theme",
+    "vscode theme",
+    "cursor theme",
+    "zed theme",
+    "neovim colorscheme",
+    "helix theme",
+    "theme editor",
+    "color scheme generator",
     "syntax highlighting",
-    "code editor",
-    "visual studio code",
-    "theme generator",
+    "theme creator",
+    "code editor customization",
   ],
-  metadataBase: new URL("https://www.themecraft.top/"),
   authors: [{ name: "SymphoneIceAttack" }],
   creator: "SymphoneIceAttack",
   publisher: "SymphoneIceAttack",
   generator: "SymphoneIceAttack",
-  applicationName: "VSCode Theme Editor",
+  applicationName: "Code Theme Editor",
   openGraph: {
-    title: "VSCode Theme Editor - Create & Export Custom Themes",
+    title: "Code Theme Editor - Create Themes for Multiple Editors",
     description:
-      "Online VSCode theme editor with live preview. Create, customize, and export beautiful Visual Studio Code color themes.",
+      "Universal theme editor with live preview. Create and export themes for VSCode, Cursor, Zed, Neovim, and Helix.",
     type: "website",
     locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
-    title: "VSCode Theme Editor - Create & Export Custom Themes",
+    title: "Code Theme Editor - VSCode, Cursor, Zed, Neovim & Helix",
     description:
-      "Online VSCode theme editor with live preview. Create, customize, and export beautiful Visual Studio Code color themes.",
+      "Universal theme editor with live preview. Create and export themes for multiple code editors.",
   },
   robots: {
     index: true,

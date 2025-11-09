@@ -3,7 +3,7 @@ import { ImageResponse } from "next/og";
 export const runtime = "edge";
 
 export const alt =
-  "VSCode Theme Editor - Create and export custom VSCode themes online";
+  "Code Theme Editor - Create and export custom themes for VSCode, Cursor, Zed, Neovim, and Helix";
 export const size = {
   width: 1200,
   height: 630,
@@ -66,7 +66,7 @@ export default async function Image() {
             lineHeight: 1.2,
           }}
         >
-          VSCode Theme Editor
+          Code Theme Editor
         </h1>
 
         <p
@@ -78,7 +78,7 @@ export default async function Image() {
             lineHeight: 1.4,
           }}
         >
-          Create and export custom VSCode themes online with live preview
+          Create themes for VSCode, Cursor, Zed, Neovim & Helix
         </p>
 
         <div
@@ -156,7 +156,7 @@ export default async function Image() {
               }}
             />
             <span style={{ color: "#e4e4e7", fontSize: "20px" }}>
-              JSON Export
+              Multi-Format Export
             </span>
           </div>
         </div>

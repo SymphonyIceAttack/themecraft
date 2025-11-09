@@ -74,10 +74,10 @@ export default function Home() {
             <Code2 className="w-8 h-8 text-primary" />
             <div>
               <h1 className="text-xl font-semibold text-foreground">
-                VSCode Theme Editor
+                Code Theme Editor
               </h1>
               <p className="text-sm text-muted-foreground">
-                Create and export custom themes
+                Create themes for VSCode, Cursor, Zed, Neovim & Helix
               </p>
             </div>
           </div>
