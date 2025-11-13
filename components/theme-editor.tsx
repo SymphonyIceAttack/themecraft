@@ -44,29 +44,33 @@ export function ThemeEditor({ theme, onThemeChange }: ThemeEditorProps) {
   };
 
   return (
-    <Card className="p-6">
+    <Card className="p-6 bg-card/80 backdrop-blur-sm border-2 border-primary/20 hover:border-primary/40 transition-all duration-300 shadow-xl hover:shadow-2xl hover:shadow-primary/10">
       <div className="space-y-6">
         <div>
-          <h2 className="text-lg font-semibold text-foreground mb-4">
+          <h2 className="text-lg font-semibold text-foreground mb-4 flex items-center gap-2">
+            <span className="w-1 h-6 bg-gradient-to-b from-primary to-accent rounded-full" />
             Theme Settings
           </h2>
           <div className="space-y-4">
             <div>
-              <Label htmlFor="theme-name" className="text-foreground">
+              <Label
+                htmlFor="theme-name"
+                className="text-foreground font-medium"
+              >
                 Theme Name
               </Label>
               <Input
                 id="theme-name"
                 value={theme.name}
                 onChange={(e) => updateThemeName(e.target.value)}
-                className="mt-2"
+                className="mt-2 bg-background/50 border-border/50 focus:border-primary transition-all duration-300"
               />
             </div>
           </div>
         </div>
 
         <Tabs defaultValue="editor" className="w-full">
-          <TabsList className="grid w-full grid-cols-2">
+          <TabsList className="grid w-full grid-cols-2 bg-muted/50">
             <TabsTrigger value="editor">Editor Colors</TabsTrigger>
             <TabsTrigger value="syntax">Syntax Colors</TabsTrigger>
           </TabsList>
@@ -92,7 +96,7 @@ export function ThemeEditor({ theme, onThemeChange }: ThemeEditorProps) {
                 {theme.tokenColors.map((token: TokenColor, index: number) => (
                   <div
                     key={index}
-                    className="space-y-3 p-4 bg-muted/50 rounded-lg"
+                    className="space-y-3 p-4 bg-gradient-to-br from-muted/50 to-muted/30 rounded-lg border border-border/50 hover:border-primary/30 transition-all duration-300"
                   >
                     <div className="text-sm font-medium text-foreground">
                       {token.scope.join(", ")}
@@ -128,9 +132,9 @@ function ColorInput({
   const wasNormalized = value !== normalizedValue && value.trim() !== "";
 
   return (
-    <div className="flex items-center gap-3">
+    <div className="flex items-center gap-3 group">
       <div className="flex-1">
-        <Label className="text-sm text-muted-foreground">
+        <Label className="text-sm text-muted-foreground font-medium">
           {label}
           {wasNormalized && (
             <span
@@ -161,19 +165,24 @@ function ColorInput({
               onChange(normalized);
             }
           }}
-          className="mt-1 font-mono text-sm"
+          className="mt-1 font-mono text-sm bg-background/50 border-border/50 focus:border-primary transition-all duration-300"
           placeholder="#000000"
         />
       </div>
       <div className="flex flex-col items-center gap-1">
-        <Label className="text-xs text-muted-foreground">Color</Label>
-        <input
-          type="color"
-          value={normalizedValue}
-          onChange={(e) => onChange(e.target.value)}
-          className="w-12 h-10 rounded border border-border cursor-pointer"
-          title={`Current: ${normalizedValue}`}
-        />
+        <Label className="text-xs text-muted-foreground font-medium">
+          Color
+        </Label>
+        <div className="relative">
+          <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20 rounded blur opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+          <input
+            type="color"
+            value={normalizedValue}
+            onChange={(e) => onChange(e.target.value)}
+            className="w-12 h-10 rounded-lg border-2 border-border/50 cursor-pointer hover:border-primary transition-all duration-300 hover:scale-110 relative z-10"
+            title={`Current: ${normalizedValue}`}
+          />
+        </div>
       </div>
     </div>
   );
