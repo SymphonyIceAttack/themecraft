@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { CodePreview } from "@/components/code-preview";
 import { ExportDialog } from "@/components/export-dialog";
+import { FaqSection } from "@/components/faq-section";
 import { ThemeEditor } from "@/components/theme-editor";
 import { ThemeModeToggle } from "@/components/theme-mode-toggle";
 import { Button } from "@/components/ui/button";
@@ -118,6 +119,8 @@ export default function Home() {
           <CodePreview theme={theme} />
         </div>
       </main>
+
+      <FaqSection />
 
       <ExportDialog
         open={showExport}
