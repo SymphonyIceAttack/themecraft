@@ -10,6 +10,7 @@ const _geist = Geist({ subsets: ["latin"] });
 const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://themecraft.top"),
   title:
     "Code Theme Editor - Create & Export Themes for VSCode, Cursor, Zed, Neovim & Helix",
   description:
