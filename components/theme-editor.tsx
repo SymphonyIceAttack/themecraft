@@ -173,13 +173,19 @@ function ColorInput({
         <Label className="text-xs text-muted-foreground font-medium">
           Color
         </Label>
-        <div className="relative">
-          <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20 rounded blur opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+        <div className="relative w-12 h-12 rounded-full overflow-hidden border-2 border-border/50 hover:border-primary transition-all duration-300 hover:scale-110 cursor-pointer">
           <input
             type="color"
             value={normalizedValue}
             onChange={(e) => onChange(e.target.value)}
-            className="w-12 h-10 rounded-lg border-2 border-border/50 cursor-pointer hover:border-primary transition-all duration-300 hover:scale-110 relative z-10"
+            className="absolute inset-0 w-full h-full cursor-pointer border-0 rounded-full"
+            style={{
+              padding: 0,
+              margin: 0,
+              WebkitAppearance: "none",
+              MozAppearance: "none",
+              appearance: "none",
+            }}
             title={`Current: ${normalizedValue}`}
           />
         </div>

@@ -215,4 +215,28 @@
     pointer-events: none;
     opacity: 0.5;
   }
+
+  /* Force circular color picker input */
+  input[type="color"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+    border-radius: 50%;
+  }
+
+  input[type="color"]::-webkit-color-swatch-wrapper {
+    padding: 0;
+    border-radius: 50%;
+  }
+
+  input[type="color"]::-webkit-color-swatch {
+    border: none;
+    border-radius: 50%;
+  }
+
+  input[type="color"]::-moz-color-swatch {
+    border: none;
+    border-radius: 50%;
+  }
 }
