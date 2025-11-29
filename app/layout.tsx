@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     "code editor theme",
     "vscode theme",
     "cursor theme",
-    "zed theme", 
+    "zed theme",
     "neovim colorscheme",
     "helix theme",
     "theme editor",
@@ -41,17 +41,19 @@ export const metadata: Metadata = {
     "theme library",
     "color palette generator",
     "syntax highlighting editor",
-    "code color schemes"
+    "code color schemes",
   ],
-  authors: [{ 
-    name: "SymphoneIceAttack",
-    url: "https://github.com/symphoneiceattack"
-  }],
+  authors: [
+    {
+      name: "SymphoneIceAttack",
+      url: "https://github.com/symphoneiceattack",
+    },
+  ],
   creator: "SymphoneIceAttack",
   publisher: "ThemeCraft",
   generator: "ThemeCraft v2.0",
   applicationName: "ThemeCraft - Code Theme Editor",
-  
+
   // SEO & Indexing
   robots: {
     index: true,
@@ -64,7 +66,7 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-  
+
   // Open Graph
   openGraph: {
     type: "website",
@@ -83,7 +85,7 @@ export const metadata: Metadata = {
       },
     ],
   },
-  
+
   // Twitter Card
   twitter: {
     card: "summary_large_image",
@@ -93,7 +95,7 @@ export const metadata: Metadata = {
     creator: "@symphoneiceattack",
     images: ["/og-image.jpg"],
   },
-  
+
   // PWA & App Links
   manifest: "/site.webmanifest",
   appleWebApp: {
@@ -101,7 +103,7 @@ export const metadata: Metadata = {
     statusBarStyle: "default",
     title: "ThemeCraft",
   },
-  
+
   // Verification & Structured Data
   other: {
     "mobile-web-app-capable": "yes",
@@ -111,7 +113,7 @@ export const metadata: Metadata = {
     "msapplication-TileColor": "#667eea",
     "msapplication-config": "/browserconfig.xml",
   },
-  
+
   // JSON-LD Schema
   icons: {
     icon: "/favicon.ico",
@@ -132,86 +134,96 @@ export default function RootLayout({
       {
         "@type": "WebSite",
         "@id": "https://themecraft.vercel.app/#website",
-        "url": "https://themecraft.vercel.app",
-        "name": "ThemeCraft - Code Theme Editor",
-        "description": "Professional code editor theme creation tool with live preview and multi-export support for VSCode, Cursor, Zed, Neovim & Helix",
-        "publisher": {
-          "@id": "https://themecraft.vercel.app/#organization"
+        url: "https://themecraft.vercel.app",
+        name: "ThemeCraft - Code Theme Editor",
+        description:
+          "Professional code editor theme creation tool with live preview and multi-export support for VSCode, Cursor, Zed, Neovim & Helix",
+        publisher: {
+          "@id": "https://themecraft.vercel.app/#organization",
         },
-        "potentialAction": [
+        potentialAction: [
           {
             "@type": "SearchAction",
-            "target": "https://themecraft.vercel.app/search?q={search_term_string}",
-            "query-input": "required name=search_term_string"
-          }
+            target:
+              "https://themecraft.vercel.app/search?q={search_term_string}",
+            "query-input": "required name=search_term_string",
+          },
         ],
-        "inLanguage": "en-US",
-        "about": {
-          "@id": "https://themecraft.vercel.app/#software"
+        inLanguage: "en-US",
+        about: {
+          "@id": "https://themecraft.vercel.app/#software",
         },
-        "audience": {
+        audience: {
           "@type": "Audience",
-          "audienceType": ["Web Developers", "Code Editors Users", "Software Engineers", "Theme Designers"]
-        }
+          audienceType: [
+            "Web Developers",
+            "Code Editors Users",
+            "Software Engineers",
+            "Theme Designers",
+          ],
+        },
       },
-      
+
       // Organization Schema
       {
         "@type": "Organization",
         "@id": "https://themecraft.vercel.app/#organization",
-        "name": "ThemeCraft",
-        "url": "https://themecraft.vercel.app",
-        "logo": {
+        name: "ThemeCraft",
+        url: "https://themecraft.vercel.app",
+        logo: {
           "@type": "ImageObject",
-          "url": "https://themecraft.vercel.app/logo.png",
-          "width": 512,
-          "height": 512
+          url: "https://themecraft.vercel.app/logo.png",
+          width: 512,
+          height: 512,
         },
-        "description": "Professional code editor theme creation platform supporting VSCode, Cursor, Zed, Neovim and Helix",
-        "creator": {
+        description:
+          "Professional code editor theme creation platform supporting VSCode, Cursor, Zed, Neovim and Helix",
+        creator: {
           "@type": "Person",
-          "name": "SymphoneIceAttack",
-          "url": "https://github.com/symphoneiceattack",
-          "sameAs": [
+          name: "SymphoneIceAttack",
+          url: "https://github.com/symphoneiceattack",
+          sameAs: [
             "https://github.com/symphoneiceattack",
             "https://twitter.com/symphoneiceattack",
-            "https://linkedin.com/in/symphoneiceattack"
-          ]
+            "https://linkedin.com/in/symphoneiceattack",
+          ],
         },
-        "sameAs": [
+        sameAs: [
           "https://github.com/symphoneiceattack",
-          "https://themecraft.vercel.app"
+          "https://themecraft.vercel.app",
         ],
-        "contactPoint": {
+        contactPoint: {
           "@type": "ContactPoint",
-          "contactType": "Customer Support",
-          "availableLanguage": "English"
-        }
+          contactType: "Customer Support",
+          availableLanguage: "English",
+        },
       },
-      
+
       // Software Application Schema
       {
         "@type": "SoftwareApplication",
         "@id": "https://themecraft.vercel.app/#software",
-        "name": "ThemeCraft",
-        "description": "Advanced code editor theme creation and editing application with visual designer, live preview, and multi-format export capabilities",
-        "url": "https://themecraft.vercel.app",
-        "applicationCategory": "DevelopmentApplication",
-        "applicationSubCategory": "Theme Editor",
-        "operatingSystem": "Web Browser",
-        "softwareVersion": "2.0",
-        "datePublished": "2024-12-01",
-        "dateModified": "2024-12-29",
-        "releaseNotes": "Enhanced visual editor with improved color picker, real-time preview, and expanded export format support",
-        "author": {
+        name: "ThemeCraft",
+        description:
+          "Advanced code editor theme creation and editing application with visual designer, live preview, and multi-format export capabilities",
+        url: "https://themecraft.vercel.app",
+        applicationCategory: "DevelopmentApplication",
+        applicationSubCategory: "Theme Editor",
+        operatingSystem: "Web Browser",
+        softwareVersion: "2.0",
+        datePublished: "2024-12-01",
+        dateModified: "2024-12-29",
+        releaseNotes:
+          "Enhanced visual editor with improved color picker, real-time preview, and expanded export format support",
+        author: {
           "@type": "Person",
-          "name": "SymphoneIceAttack",
-          "url": "https://github.com/symphoneiceattack"
+          name: "SymphoneIceAttack",
+          url: "https://github.com/symphoneiceattack",
         },
-        "publisher": {
-          "@id": "https://themecraft.vercel.app/#organization"
+        publisher: {
+          "@id": "https://themecraft.vercel.app/#organization",
         },
-        "featureList": [
+        featureList: [
           "Visual theme editor with intuitive color controls",
           "Live code syntax preview system",
           "Multi-format export (VSCode, Cursor, Zed, Neovim, Helix)",
@@ -221,189 +233,202 @@ export default function RootLayout({
           "Real-time collaboration support",
           "Version control for theme designs",
           "Import/export theme collections",
-          "Color accessibility checker"
+          "Color accessibility checker",
         ],
-        "screenshot": [
+        screenshot: [
           {
             "@type": "ImageObject",
-            "url": "https://themecraft.vercel.app/screenshot-wide.jpg",
-            "width": 1280,
-            "height": 720,
-            "caption": "ThemeCraft main interface showing theme editor and live preview"
+            url: "https://themecraft.vercel.app/screenshot-wide.jpg",
+            width: 1280,
+            height: 720,
+            caption:
+              "ThemeCraft main interface showing theme editor and live preview",
           },
           {
             "@type": "ImageObject",
-            "url": "https://themecraft.vercel.app/screenshot-narrow.jpg",
-            "width": 750,
-            "height": 1334,
-            "caption": "ThemeCraft mobile interface for theme editing on-the-go"
-          }
+            url: "https://themecraft.vercel.app/screenshot-narrow.jpg",
+            width: 750,
+            height: 1334,
+            caption: "ThemeCraft mobile interface for theme editing on-the-go",
+          },
         ],
-        "offers": {
+        offers: {
           "@type": "Offer",
-          "price": "0",
-          "priceCurrency": "USD",
-          "availability": "https://schema.org/InStock",
-          "priceValidUntil": "2025-12-31"
+          price: "0",
+          priceCurrency: "USD",
+          availability: "https://schema.org/InStock",
+          priceValidUntil: "2025-12-31",
         },
-        "aggregateRating": {
+        aggregateRating: {
           "@type": "AggregateRating",
-          "ratingValue": "4.8",
-          "ratingCount": "127",
-          "bestRating": "5",
-          "worstRating": "1"
+          ratingValue: "4.8",
+          ratingCount: "127",
+          bestRating: "5",
+          worstRating: "1",
         },
-        "keywords": "code editor theme, vscode theme, cursor theme, zed theme, neovim colorscheme, helix theme, theme editor, color scheme generator, syntax highlighting themes",
-        "programmingLanguage": ["JavaScript", "TypeScript", "HTML", "CSS", "JSON", "Lua", "TOML"],
-        "supportsAccessibility": true,
-        "isAccessibleForFree": true
+        keywords:
+          "code editor theme, vscode theme, cursor theme, zed theme, neovim colorscheme, helix theme, theme editor, color scheme generator, syntax highlighting themes",
+        programmingLanguage: [
+          "JavaScript",
+          "TypeScript",
+          "HTML",
+          "CSS",
+          "JSON",
+          "Lua",
+          "TOML",
+        ],
+        supportsAccessibility: true,
+        isAccessibleForFree: true,
       },
-      
+
       // WebPage Schema
       {
         "@type": "WebPage",
         "@id": "https://themecraft.vercel.app/#webpage",
-        "url": "https://themecraft.vercel.app",
-        "name": "Code Theme Editor - Create & Export Themes for VSCode, Cursor, Zed, Neovim & Helix",
-        "description": "Professional online tool for creating, customizing and exporting beautiful code editor themes. Features live preview, visual editor, and multi-format export for all major code editors.",
-        "isPartOf": {
-          "@id": "https://themecraft.vercel.app/#website"
+        url: "https://themecraft.vercel.app",
+        name: "Code Theme Editor - Create & Export Themes for VSCode, Cursor, Zed, Neovim & Helix",
+        description:
+          "Professional online tool for creating, customizing and exporting beautiful code editor themes. Features live preview, visual editor, and multi-format export for all major code editors.",
+        isPartOf: {
+          "@id": "https://themecraft.vercel.app/#website",
         },
-        "about": {
-          "@id": "https://themecraft.vercel.app/#software"
+        about: {
+          "@id": "https://themecraft.vercel.app/#software",
         },
-        "mainEntity": {
-          "@id": "https://themecraft.vercel.app/#software"
+        mainEntity: {
+          "@id": "https://themecraft.vercel.app/#software",
         },
-        "inLanguage": "en-US",
-        "breadcrumbs": {
+        inLanguage: "en-US",
+        breadcrumbs: {
           "@type": "BreadcrumbList",
-          "itemListElement": [
+          itemListElement: [
             {
               "@type": "ListItem",
-              "position": 1,
-              "name": "Home",
-              "item": "https://themecraft.vercel.app"
+              position: 1,
+              name: "Home",
+              item: "https://themecraft.vercel.app",
             },
             {
-              "@type": "ListItem", 
-              "position": 2,
-              "name": "Theme Editor",
-              "item": "https://themecraft.vercel.app/editor"
-            }
-          ]
-        }
+              "@type": "ListItem",
+              position: 2,
+              name: "Theme Editor",
+              item: "https://themecraft.vercel.app/editor",
+            },
+          ],
+        },
       },
-      
+
       // FAQ Schema
       {
         "@type": "FAQPage",
         "@id": "https://themecraft.vercel.app/#faq",
-        "mainEntity": [
+        mainEntity: [
           {
             "@type": "Question",
-            "name": "What code editors does ThemeCraft support?",
-            "acceptedAnswer": {
+            name: "What code editors does ThemeCraft support?",
+            acceptedAnswer: {
               "@type": "Answer",
-              "text": "ThemeCraft supports theme creation for VSCode, Cursor, Zed, Neovim, and Helix. You can export your themes in the appropriate format for each editor."
-            }
-          },
-          {
-            "@type": "Question", 
-            "name": "Is ThemeCraft free to use?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes, ThemeCraft is completely free to use. You can create unlimited themes and export them without any cost or registration required."
-            }
+              text: "ThemeCraft supports theme creation for VSCode, Cursor, Zed, Neovim, and Helix. You can export your themes in the appropriate format for each editor.",
+            },
           },
           {
             "@type": "Question",
-            "name": "Can I preview my theme in real-time?",
-            "acceptedAnswer": {
-              "@type": "Answer", 
-              "text": "Yes, ThemeCraft features a live preview system that shows your theme applied to actual code samples in real-time as you make changes."
-            }
+            name: "Is ThemeCraft free to use?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "Yes, ThemeCraft is completely free to use. You can create unlimited themes and export them without any cost or registration required.",
+            },
           },
           {
             "@type": "Question",
-            "name": "How do I export themes for different editors?",
-            "acceptedAnswer": {
+            name: "Can I preview my theme in real-time?",
+            acceptedAnswer: {
               "@type": "Answer",
-              "text": "ThemeCraft automatically generates the correct file format for each supported editor. Simply select your target editor and click export to download the appropriate file."
-            }
+              text: "Yes, ThemeCraft features a live preview system that shows your theme applied to actual code samples in real-time as you make changes.",
+            },
           },
           {
             "@type": "Question",
-            "name": "Can I import existing themes to edit?",
-            "acceptedAnswer": {
+            name: "How do I export themes for different editors?",
+            acceptedAnswer: {
               "@type": "Answer",
-              "text": "Yes, you can import existing theme files (JSON, TOML, Lua) and edit them using ThemeCraft's visual editor interface."
-            }
-          }
-        ]
+              text: "ThemeCraft automatically generates the correct file format for each supported editor. Simply select your target editor and click export to download the appropriate file.",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "Can I import existing themes to edit?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "Yes, you can import existing theme files (JSON, TOML, Lua) and edit them using ThemeCraft's visual editor interface.",
+            },
+          },
+        ],
       },
-      
+
       // Service Schema
       {
         "@type": "Service",
         "@id": "https://themecraft.vercel.app/#service",
-        "name": "Theme Design & Development Service",
-        "description": "Professional theme design and development services for code editors with custom color schemes, syntax highlighting, and UI customization",
-        "provider": {
-          "@id": "https://themecraft.vercel.app/#organization"
+        name: "Theme Design & Development Service",
+        description:
+          "Professional theme design and development services for code editors with custom color schemes, syntax highlighting, and UI customization",
+        provider: {
+          "@id": "https://themecraft.vercel.app/#organization",
         },
-        "serviceType": "Theme Design",
-        "audience": {
-          "@type": "Audience", 
-          "audienceType": ["Developers", "Theme Designers", "Code Editor Users"]
+        serviceType: "Theme Design",
+        audience: {
+          "@type": "Audience",
+          audienceType: ["Developers", "Theme Designers", "Code Editor Users"],
         },
-        "areaServed": "Worldwide",
-        "hasOfferCatalog": {
+        areaServed: "Worldwide",
+        hasOfferCatalog: {
           "@type": "OfferCatalog",
-          "name": "Theme Services",
-          "itemListElement": [
+          name: "Theme Services",
+          itemListElement: [
             {
               "@type": "Offer",
-              "itemOffered": {
+              itemOffered: {
                 "@type": "Service",
-                "name": "Custom Theme Creation"
-              }
-            },
-            {
-              "@type": "Offer", 
-              "itemOffered": {
-                "@type": "Service",
-                "name": "Theme Consultation"
-              }
+                name: "Custom Theme Creation",
+              },
             },
             {
               "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service", 
-                "name": "Theme Migration"
-              }
-            }
-          ]
-        }
+              itemOffered: {
+                "@type": "Service",
+                name: "Theme Consultation",
+              },
+            },
+            {
+              "@type": "Offer",
+              itemOffered: {
+                "@type": "Service",
+                name: "Theme Migration",
+              },
+            },
+          ],
+        },
       },
-      
+
       // CreativeWork Schema for Documentation
       {
         "@type": "CreativeWork",
         "@id": "https://themecraft.vercel.app/#documentation",
-        "name": "ThemeCraft Documentation",
-        "description": "Complete documentation for ThemeCraft theme editor including tutorials, guides, and API references",
-        "author": {
-          "@id": "https://themecraft.vercel.app/#organization"
+        name: "ThemeCraft Documentation",
+        description:
+          "Complete documentation for ThemeCraft theme editor including tutorials, guides, and API references",
+        author: {
+          "@id": "https://themecraft.vercel.app/#organization",
         },
-        "about": {
-          "@id": "https://themecraft.vercel.app/#software"
+        about: {
+          "@id": "https://themecraft.vercel.app/#software",
         },
-        "inLanguage": "en-US",
-        "educationalUse": ["Reference", "Instruction"],
-        "learningResourceType": ["Documentation", "Tutorial", "Guide"]
-      }
-    ]
+        inLanguage: "en-US",
+        educationalUse: ["Reference", "Instruction"],
+        learningResourceType: ["Documentation", "Tutorial", "Guide"],
+      },
+    ],
   };
 
   return (
@@ -412,7 +437,7 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(jsonLd, null, 0)
+            __html: JSON.stringify(jsonLd, null, 0),
           }}
         />
         {/* Additional SEO meta tags */}
@@ -420,19 +445,19 @@ export default function RootLayout({
         <meta name="geo.placename" content="United States" />
         <meta name="geo.position" content="39.8283;-98.5795" />
         <meta name="ICBM" content="39.8283, -98.5795" />
-        
+
         {/* Additional structured data for better SEO */}
         <meta property="og:site_name" content="ThemeCraft" />
         <meta property="og:type" content="website" />
         <meta property="og:locale" content="en_US" />
         <meta property="article:author" content="SymphoneIceAttack" />
         <meta property="article:publisher" content="ThemeCraft" />
-        
+
         {/* Twitter Card specific meta tags */}
         <meta name="twitter:domain" content="themecraft.vercel.app" />
         <meta name="twitter:creator" content="@symphoneiceattack" />
         <meta name="twitter:site" content="@symphoneiceattack" />
-        
+
         {/* Additional App links */}
         <meta name="al:ios:app_name" content="ThemeCraft" />
         <meta name="al:android:app_name" content="ThemeCraft" />

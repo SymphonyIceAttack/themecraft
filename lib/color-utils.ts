@@ -52,6 +52,60 @@ export function normalizeColor(color: string | undefined): string {
     return rgbToHex(r, g, b);
   }
 
+  // HSL format: hsl(120, 100%, 50%) or hsl(120,100%,50%)
+  const hslMatch = trimmed.match(
+    /^hsl\s*$$\s*(\d+)\s*,\s*(\d+)%\s*,\s*(\d+)%\s*$$$/i,
+  );
+  if (hslMatch) {
+    const h = Number.parseInt(hslMatch[1], 10);
+    const s = Number.parseInt(hslMatch[2], 10) / 100;
+    const l = Number.parseInt(hslMatch[3], 10) / 100;
+    return hslToHex(h, s, l);
+  }
+
+  // HSLA format: hsla(120, 100%, 50%, 0.5)
+  const hslaMatch = trimmed.match(
+    /^hsla\s*$$\s*(\d+)\s*,\s*(\d+)%\s*,\s*(\d+)%\s*,\s*[\d.]+\s*$$$/i,
+  );
+  if (hslaMatch) {
+    const h = Number.parseInt(hslaMatch[1], 10);
+    const s = Number.parseInt(hslaMatch[2], 10) / 100;
+    const l = Number.parseInt(hslaMatch[3], 10) / 100;
+    return hslToHex(h, s, l);
+  }
+
+  // Named colors and special values
+  const lowerTrimmed = trimmed.toLowerCase();
+  const namedColors: Record<string, string> = {
+    transparent: "#000000",
+    none: "#000000",
+    currentcolor: "#000000",
+    red: "#ff0000",
+    blue: "#0000ff",
+    green: "#008000",
+    yellow: "#ffff00",
+    orange: "#ffa500",
+    purple: "#800080",
+    pink: "#ffc0cb",
+    brown: "#a52a2a",
+    black: "#000000",
+    white: "#ffffff",
+    gray: "#808080",
+    grey: "#808080",
+    silver: "#c0c0c0",
+    maroon: "#800000",
+    navy: "#000080",
+    teal: "#008080",
+    lime: "#00ff00",
+    aqua: "#00ffff",
+    fuchsia: "#ff00ff",
+    olive: "#808000",
+  };
+
+  if (namedColors[lowerTrimmed]) {
+    return namedColors[lowerTrimmed];
+  }
+
   if (/^\d+$/.test(trimmed)) {
     const padded = trimmed.padEnd(6, "0").slice(0, 6);
     console.warn(
@@ -71,6 +125,50 @@ function rgbToHex(r: number, g: number, b: number): string {
   const clamp = (val: number) => Math.max(0, Math.min(255, val));
   const toHex = (val: number) => clamp(val).toString(16).padStart(2, "0");
   return `#${toHex(r)}${toHex(g)}${toHex(b)}`;
+}
+
+/**
+ * Convert HSL values to hex format
+ */
+function hslToHex(h: number, s: number, l: number): string {
+  const c = (1 - Math.abs(2 * l - 1)) * s;
+  const x = c * (1 - Math.abs(((h / 60) % 2) - 1));
+  const m = l - c / 2;
+  let r = 0,
+    g = 0,
+    b = 0;
+
+  if (0 <= h && h < 60) {
+    r = c;
+    g = x;
+    b = 0;
+  } else if (60 <= h && h < 120) {
+    r = x;
+    g = c;
+    b = 0;
+  } else if (120 <= h && h < 180) {
+    r = 0;
+    g = c;
+    b = x;
+  } else if (180 <= h && h < 240) {
+    r = 0;
+    g = x;
+    b = c;
+  } else if (240 <= h && h < 300) {
+    r = x;
+    g = 0;
+    b = c;
+  } else if (300 <= h && h < 360) {
+    r = c;
+    g = 0;
+    b = x;
+  }
+
+  return rgbToHex(
+    Math.round((r + m) * 255),
+    Math.round((g + m) * 255),
+    Math.round((b + m) * 255),
+  );
 }
 
 /**
