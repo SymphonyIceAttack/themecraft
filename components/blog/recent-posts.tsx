@@ -60,18 +60,18 @@ export function RecentPosts({ posts }: RecentPostsProps) {
   }
 
   return (
-    <section className="mt-12">
+    <section>
       <Card className="border-2 border-gray-200 dark:border-gray-800 bg-white dark:bg-slate-950">
-        <CardHeader>
-          <CardTitle className="text-3xl font-bold text-gray-900 dark:text-white">
+        <CardHeader className="px-4 sm:px-6">
+          <CardTitle className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white">
             Recent Posts
           </CardTitle>
           <CardDescription className="text-gray-600 dark:text-gray-400">
             Check out our latest articles
           </CardDescription>
         </CardHeader>
-        <CardContent>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <CardContent className="px-4 sm:px-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             {posts.map((post) => (
               <Link
                 key={post.id}
@@ -81,7 +81,7 @@ export function RecentPosts({ posts }: RecentPostsProps) {
               >
                 <Card className="h-full border-gray-200 dark:border-gray-800 hover:border-purple-500 dark:hover:border-purple-600 transition-all duration-300 hover:shadow-lg">
                   <CardHeader>
-                    <CardTitle className="text-lg font-semibold text-gray-900 dark:text-white group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors line-clamp-2">
+                    <CardTitle className="text-base sm:text-lg font-semibold text-gray-900 dark:text-white group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors line-clamp-2">
                       {post.title}
                     </CardTitle>
                     <CardDescription className="text-sm text-gray-500 dark:text-gray-500">

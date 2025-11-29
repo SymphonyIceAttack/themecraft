@@ -14,3 +14,12 @@ export interface VSCodeTheme {
   colors: Record<string, string>;
   tokenColors: TokenColor[];
 }
+
+export interface BlogPost {
+  id: string;
+  title: string;
+  slug: string;
+  description: string;
+  published_at: string;
+  status: string;
+}
