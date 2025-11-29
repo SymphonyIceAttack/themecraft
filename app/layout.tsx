@@ -1,9 +1,17 @@
 import { Analytics } from "@vercel/analytics/react";
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import type React from "react";
 import { Toaster } from "@/components/ui/sonner";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
+
+export const viewport: Viewport = {
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#667eea" },
+    { media: "(prefers-color-scheme: dark)", color: "#5a67d8" },
+  ],
+  colorScheme: "light dark",
+};
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://themecraft.vercel.app"),
@@ -93,13 +101,6 @@ export const metadata: Metadata = {
     statusBarStyle: "default",
     title: "ThemeCraft",
   },
-  
-  // Theme & Color Scheme
-  themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#667eea" },
-    { media: "(prefers-color-scheme: dark)", color: "#5a67d8" },
-  ],
-  colorScheme: "light dark",
   
   // Verification & Structured Data
   other: {
