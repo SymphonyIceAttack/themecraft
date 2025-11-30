@@ -10,11 +10,11 @@ This document provides essential information for AI agents working on the ThemeC
 
 ### Development
 ```bash
-npm run dev          # Start development server (http://localhost:3000)
-npm run build        # Build for production
-npm run start        # Start production server
-npm run lint         # Run Biome linter
-npm run format       # Format code with Biome
+pnpm run dev          # Start development server (http://localhost:3000)
+pnpm run build        # Build for production
+pnpm run start        # Start production server
+pnpm run lint         # Run Biome linter
+pnpm run format       # Format code with Biome
 ```
 
 ### CI/CD

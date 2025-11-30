@@ -19,11 +19,11 @@ export function BlogThemeToggle() {
       <Button
         variant="outline"
         size="icon"
-        className="transition-all hover:scale-105 bg-transparent border-gray-300 dark:border-gray-600"
+        className="transition-all hover:scale-105 bg-transparent border-gray-300 dark:border-gray-600 touch-manipulation"
         aria-label="Toggle blog theme"
         disabled
       >
-        <Moon className="h-5 w-5" />
+        <Moon className="h-4 w-4 sm:h-5 sm:w-5" />
       </Button>
     );
   }
@@ -33,13 +33,13 @@ export function BlogThemeToggle() {
       variant="outline"
       size="icon"
       onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-      className="transition-all hover:scale-105 bg-transparent border-gray-300 dark:border-gray-600"
+      className="transition-all hover:scale-105 bg-transparent border-gray-300 dark:border-gray-600 touch-manipulation"
       aria-label="Toggle blog theme"
     >
       {theme === "light" ? (
-        <Moon className="h-5 w-5" />
+        <Moon className="h-4 w-4 sm:h-5 sm:w-5" />
       ) : (
-        <Sun className="h-5 w-5" />
+        <Sun className="h-4 w-4 sm:h-5 sm:w-5" />
       )}
     </Button>
   );

@@ -44,18 +44,18 @@ export function ThemeEditor({ theme, onThemeChange }: ThemeEditorProps) {
   };
 
   return (
-    <Card className="p-6 bg-card/80 backdrop-blur-sm border-2 border-primary/20 hover:border-primary/40 transition-all duration-300 shadow-xl hover:shadow-2xl hover:shadow-primary/10">
-      <div className="space-y-6">
+    <Card className="p-4 sm:p-6 bg-card/80 backdrop-blur-sm border-2 border-primary/20 hover:border-primary/40 transition-all duration-300 shadow-xl hover:shadow-2xl hover:shadow-primary/10">
+      <div className="space-y-4 sm:space-y-6">
         <div>
-          <h2 className="text-lg font-semibold text-foreground mb-4 flex items-center gap-2">
+          <h2 className="text-base sm:text-lg font-semibold text-foreground mb-3 sm:mb-4 flex items-center gap-2">
             <span className="w-1 h-6 bg-gradient-to-b from-primary to-accent rounded-full" />
             Theme Settings
           </h2>
-          <div className="space-y-4">
+          <div className="space-y-3 sm:space-y-4">
             <div>
               <Label
                 htmlFor="theme-name"
-                className="text-foreground font-medium"
+                className="text-foreground font-medium text-sm sm:text-base"
               >
                 Theme Name
               </Label>
@@ -63,21 +63,21 @@ export function ThemeEditor({ theme, onThemeChange }: ThemeEditorProps) {
                 id="theme-name"
                 value={theme.name}
                 onChange={(e) => updateThemeName(e.target.value)}
-                className="mt-2 bg-background/50 border-border/50 focus:border-primary transition-all duration-300"
+                className="mt-1 sm:mt-2 bg-background/50 border-border/50 focus:border-primary transition-all duration-300 h-10 sm:h-auto touch-manipulation"
               />
             </div>
           </div>
         </div>
 
         <Tabs defaultValue="editor" className="w-full">
-          <TabsList className="grid w-full grid-cols-2 bg-muted/50">
-            <TabsTrigger value="editor">Editor Colors</TabsTrigger>
-            <TabsTrigger value="syntax">Syntax Colors</TabsTrigger>
+          <TabsList className="grid w-full grid-cols-2 bg-muted/50 h-10 sm:h-11 touch-manipulation">
+            <TabsTrigger value="editor" className="text-xs sm:text-sm px-2 sm:px-4">Editor Colors</TabsTrigger>
+            <TabsTrigger value="syntax" className="text-xs sm:text-sm px-2 sm:px-4">Syntax Colors</TabsTrigger>
           </TabsList>
 
-          <TabsContent value="editor" className="mt-4">
-            <ScrollArea className="h-[500px] pr-4">
-              <div className="space-y-4">
+          <TabsContent value="editor" className="mt-3 sm:mt-4">
+            <ScrollArea className="h-[320px] sm:h-[400px] md:h-[500px] pr-1 sm:pr-4">
+              <div className="space-y-2 sm:space-y-3 pr-2">
                 {Object.entries(theme.colors).map(([key, value]) => (
                   <ColorInput
                     key={key}
@@ -90,15 +90,15 @@ export function ThemeEditor({ theme, onThemeChange }: ThemeEditorProps) {
             </ScrollArea>
           </TabsContent>
 
-          <TabsContent value="syntax" className="mt-4">
-            <ScrollArea className="h-[500px] pr-4">
-              <div className="space-y-6">
+          <TabsContent value="syntax" className="mt-3 sm:mt-4">
+            <ScrollArea className="h-[320px] sm:h-[400px] md:h-[500px] pr-1 sm:pr-4">
+              <div className="space-y-3 sm:space-y-4 pr-2">
                 {theme.tokenColors.map((token: TokenColor, index: number) => (
                   <div
                     key={index}
-                    className="space-y-3 p-4 bg-gradient-to-br from-muted/50 to-muted/30 rounded-lg border border-border/50 hover:border-primary/30 transition-all duration-300"
+                    className="space-y-2 sm:space-y-3 p-2 sm:p-4 bg-gradient-to-br from-muted/50 to-muted/30 rounded-lg border border-border/50 hover:border-primary/30 transition-all duration-300"
                   >
-                    <div className="text-sm font-medium text-foreground">
+                    <div className="text-xs sm:text-sm font-medium text-foreground break-words">
                       {token.scope.join(", ")}
                     </div>
                     <ColorInput
@@ -132,13 +132,13 @@ function ColorInput({
   const wasNormalized = value !== normalizedValue && value.trim() !== "";
 
   return (
-    <div className="flex items-center gap-3 group">
-      <div className="flex-1">
-        <Label className="text-sm text-muted-foreground font-medium">
+    <div className="flex items-center gap-2 sm:gap-3 group">
+      <div className="flex-1 min-w-0">
+        <Label className="text-xs text-muted-foreground font-medium block mb-1">
           {label}
           {wasNormalized && (
             <span
-              className="ml-2 text-xs text-amber-500"
+              className="ml-1 sm:ml-2 text-xs text-amber-500"
               title={`Original: ${value}`}
             >
               (auto-fixed)
@@ -165,15 +165,15 @@ function ColorInput({
               onChange(normalized);
             }
           }}
-          className="mt-1 font-mono text-sm bg-background/50 border-border/50 focus:border-primary transition-all duration-300"
+          className="mt-0 font-mono text-xs bg-background/50 border-border/50 focus:border-primary transition-all duration-300 h-8 sm:h-10 touch-manipulation"
           placeholder="#000000"
         />
       </div>
-      <div className="flex flex-col items-center gap-1">
+      <div className="flex flex-col items-center gap-1 flex-shrink-0">
         <Label className="text-xs text-muted-foreground font-medium">
           Color
         </Label>
-        <div className="relative w-12 h-12 rounded-full overflow-hidden border-2 border-border/50 hover:border-primary transition-all duration-300 hover:scale-110 cursor-pointer">
+        <div className="relative w-8 h-8 sm:w-10 sm:h-10 rounded-full overflow-hidden border-2 border-border/50 hover:border-primary transition-all duration-300 hover:scale-110 cursor-pointer touch-manipulation">
           <input
             type="color"
             value={normalizedValue}

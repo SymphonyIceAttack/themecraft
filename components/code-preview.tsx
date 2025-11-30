@@ -135,7 +135,7 @@ export function CodePreview({ theme }: CodePreviewProps) {
         </div>
 
         <Select value={selectedLanguage} onValueChange={setSelectedLanguage}>
-          <SelectTrigger className="w-[180px] h-7 text-xs">
+          <SelectTrigger className="w-[120px] xs:w-[140px] sm:w-[160px] md:w-[180px] h-7 text-xs">
             <SelectValue />
           </SelectTrigger>
           <SelectContent>

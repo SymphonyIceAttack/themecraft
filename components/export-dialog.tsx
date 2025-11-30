@@ -96,20 +96,20 @@ export function ExportDialog({ open, onOpenChange, theme }: ExportDialogProps) {
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="max-w-3xl max-h-[80vh]">
+      <DialogContent className="max-w-4xl sm:max-w-5xl max-h-[90vh] sm:max-h-[80vh] w-[95vw] sm:w-auto">
         <DialogHeader>
-          <DialogTitle className="text-foreground">Export Theme</DialogTitle>
-          <DialogDescription className="text-muted-foreground">
+          <DialogTitle className="text-lg sm:text-xl text-foreground">Export Theme</DialogTitle>
+          <DialogDescription className="text-sm sm:text-base text-muted-foreground">
             Choose your editor and export the theme configuration
           </DialogDescription>
         </DialogHeader>
 
-        <div className="space-y-4">
+        <div className="space-y-4 sm:space-y-6">
           <div className="space-y-3">
             <div className="text-sm font-semibold text-foreground">
               Target Editor
             </div>
-            <div className="grid grid-cols-5 gap-2">
+            <div className="grid grid-cols-3 sm:grid-cols-5 gap-2 sm:gap-3">
               {EDITOR_OPTIONS.map((option) => {
                 const Icon = option.icon;
                 const isSelected = selectedEditor === option.value;
@@ -121,7 +121,7 @@ export function ExportDialog({ open, onOpenChange, theme }: ExportDialogProps) {
                       setSelectedEditor(option.value as EditorType)
                     }
                     className={`
-                      relative flex flex-col items-center gap-2 p-4 rounded-lg border-2 transition-all duration-200
+                      relative flex flex-col items-center gap-1 sm:gap-2 p-2 sm:p-4 rounded-lg border-2 transition-all duration-200 touch-manipulation
                       ${
                         isSelected
                           ? "border-primary bg-primary/10 shadow-md"
@@ -130,7 +130,7 @@ export function ExportDialog({ open, onOpenChange, theme }: ExportDialogProps) {
                     `}
                   >
                     <Icon
-                      className={`w-6 h-6 ${isSelected ? option.color : "text-muted-foreground"}`}
+                      className={`w-4 h-4 sm:w-6 sm:h-6 ${isSelected ? option.color : "text-muted-foreground"}`}
                     />
                     <div className="text-center">
                       <div
@@ -140,7 +140,7 @@ export function ExportDialog({ open, onOpenChange, theme }: ExportDialogProps) {
                       </div>
                     </div>
                     {isSelected && (
-                      <div className="absolute top-1 right-1 w-2 h-2 rounded-full bg-primary" />
+                      <div className="absolute top-1 right-1 w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-primary" />
                     )}
                   </button>
                 );
@@ -158,26 +158,26 @@ export function ExportDialog({ open, onOpenChange, theme }: ExportDialogProps) {
           <Textarea
             value={themeContent}
             readOnly
-            className="font-mono text-sm h-[400px] resize-none"
+            className="font-mono text-xs sm:text-sm h-[250px] sm:h-[300px] md:h-[400px] resize-none"
           />
 
-          <div className="flex gap-3">
+          <div className="flex flex-col sm:flex-row gap-2 sm:gap-3">
             <Button
               onClick={copyToClipboard}
               variant="outline"
-              className="flex-1 gap-2 bg-transparent"
+              className="flex-1 gap-2 bg-transparent h-10 sm:h-auto touch-manipulation"
             >
-              <Copy className="w-4 h-4" />
-              Copy to Clipboard
+              <Copy className="w-3 h-3 sm:w-4 sm:h-4" />
+              <span className="text-sm">Copy to Clipboard</span>
             </Button>
-            <Button onClick={downloadFile} className="flex-1 gap-2">
-              <Download className="w-4 h-4" />
-              Download {exportFormat.extension.toUpperCase()}
+            <Button onClick={downloadFile} className="flex-1 gap-2 h-10 sm:h-auto touch-manipulation">
+              <Download className="w-3 h-3 sm:w-4 sm:h-4" />
+              <span className="text-sm">Download {exportFormat.extension.toUpperCase()}</span>
             </Button>
           </div>
 
-          <div className="p-4 bg-muted rounded-lg">
-            <p className="text-sm text-muted-foreground">
+          <div className="p-3 sm:p-4 bg-muted rounded-lg">
+            <p className="text-xs sm:text-sm text-muted-foreground">
               <strong className="text-foreground">How to use:</strong>{" "}
               {selectedEditor === "vscode" &&
                 "Save the JSON file and place it in your VSCode extensions folder, or use it with the VSCode theme development workflow."}
