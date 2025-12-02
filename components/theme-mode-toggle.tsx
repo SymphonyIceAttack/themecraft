@@ -15,7 +15,12 @@ export function ThemeModeToggle() {
 
   if (!mounted) {
     return (
-      <Button variant="ghost" size="icon" className="w-10 h-10 touch-manipulation" disabled>
+      <Button
+        variant="ghost"
+        size="icon"
+        className="w-10 h-10 touch-manipulation"
+        disabled
+      >
         <Sun className="w-4 h-4 sm:w-5 sm:h-5" />
       </Button>
     );

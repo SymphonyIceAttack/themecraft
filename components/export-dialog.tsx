@@ -98,7 +98,9 @@ export function ExportDialog({ open, onOpenChange, theme }: ExportDialogProps) {
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="max-w-4xl sm:max-w-5xl max-h-[90vh] sm:max-h-[80vh] w-[95vw] sm:w-auto">
         <DialogHeader>
-          <DialogTitle className="text-lg sm:text-xl text-foreground">Export Theme</DialogTitle>
+          <DialogTitle className="text-lg sm:text-xl text-foreground">
+            Export Theme
+          </DialogTitle>
           <DialogDescription className="text-sm sm:text-base text-muted-foreground">
             Choose your editor and export the theme configuration
           </DialogDescription>
@@ -170,9 +172,14 @@ export function ExportDialog({ open, onOpenChange, theme }: ExportDialogProps) {
               <Copy className="w-3 h-3 sm:w-4 sm:h-4" />
               <span className="text-sm">Copy to Clipboard</span>
             </Button>
-            <Button onClick={downloadFile} className="flex-1 gap-2 h-10 sm:h-auto touch-manipulation">
+            <Button
+              onClick={downloadFile}
+              className="flex-1 gap-2 h-10 sm:h-auto touch-manipulation"
+            >
               <Download className="w-3 h-3 sm:w-4 sm:h-4" />
-              <span className="text-sm">Download {exportFormat.extension.toUpperCase()}</span>
+              <span className="text-sm">
+                Download {exportFormat.extension.toUpperCase()}
+              </span>
             </Button>
           </div>
 

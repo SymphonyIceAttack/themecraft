@@ -98,7 +98,9 @@ export default function EditorPage() {
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 -translate-x-full group-hover:translate-x-full transition-transform duration-700" />
                 <Download className="w-3 h-3 sm:w-4 sm:h-4 relative z-10" />
-                <span className="relative z-10 hidden sm:inline">Export Theme</span>
+                <span className="relative z-10 hidden sm:inline">
+                  Export Theme
+                </span>
                 <span className="relative z-10 sm:hidden">Export</span>
               </Button>
             </div>

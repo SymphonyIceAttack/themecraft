@@ -8,6 +8,7 @@ import {
   Zap,
 } from "lucide-react";
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { ThemeModeToggle } from "@/components/theme-mode-toggle";
 import { Badge } from "@/components/ui/badge";
@@ -49,6 +50,7 @@ export default async function BlogPage() {
           "description",
           "published_at",
           "status",
+          "imageurl",
         ],
         filter: {
           status: { _eq: "published" },
@@ -181,7 +183,17 @@ export default async function BlogPage() {
                 href={`/posts/${post.slug}`}
                 className="group"
               >
-                <Card className="h-full glass-dark border-border/50 hover:border-primary/40 transition-all duration-300 hover:shadow-2xl hover:shadow-primary/10 hover:-translate-y-1">
+                <Card className="h-full glass-dark border-border/50 hover:border-primary/40 transition-all duration-300 hover:shadow-2xl hover:shadow-primary/10 hover:-translate-y-1 overflow-hidden">
+                  {post.imageurl && (
+                    <div className="relative w-full h-48 overflow-hidden">
+                      <Image
+                        fill
+                        src={`https://symcloud.top/${post.imageurl}`}
+                        alt={post.title}
+                        className="object-cover group-hover:scale-105 transition-transform duration-300"
+                      />
+                    </div>
+                  )}
                   <CardHeader>
                     <div className="flex items-center justify-between mb-2">
                       <Badge variant="secondary" className="text-xs">

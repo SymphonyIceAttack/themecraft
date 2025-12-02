@@ -71,8 +71,18 @@ export function ThemeEditor({ theme, onThemeChange }: ThemeEditorProps) {
 
         <Tabs defaultValue="editor" className="w-full">
           <TabsList className="grid w-full grid-cols-2 bg-muted/50 h-10 sm:h-11 touch-manipulation">
-            <TabsTrigger value="editor" className="text-xs sm:text-sm px-2 sm:px-4">Editor Colors</TabsTrigger>
-            <TabsTrigger value="syntax" className="text-xs sm:text-sm px-2 sm:px-4">Syntax Colors</TabsTrigger>
+            <TabsTrigger
+              value="editor"
+              className="text-xs sm:text-sm px-2 sm:px-4"
+            >
+              Editor Colors
+            </TabsTrigger>
+            <TabsTrigger
+              value="syntax"
+              className="text-xs sm:text-sm px-2 sm:px-4"
+            >
+              Syntax Colors
+            </TabsTrigger>
           </TabsList>
 
           <TabsContent value="editor" className="mt-3 sm:mt-4">
