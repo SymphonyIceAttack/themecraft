@@ -22,4 +22,5 @@ export interface BlogPost {
   description: string;
   published_at: string;
   status: string;
+  imageurl: string | null;
 }
