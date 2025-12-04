@@ -14,13 +14,14 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://themecraft.vercel.app"),
+  metadataBase: new URL("https://themecraft.top"),
   title: {
-    default: "ThemeCraft - Professional Code Theme Editor",
+    default:
+      "ThemeCraft - Professional Code Editor Theme Designer & Visual Editor",
     template: "%s | ThemeCraft - Code Theme Designer",
   },
   description:
-    "Create stunning code editor themes for VSCode, Cursor, Zed, Neovim & Helix with our professional visual editor. Live preview, multi-export support, and unlimited customization options.",
+    "Create stunning code editor themes for VSCode, Cursor, Zed, Neovim & Helix with our professional visual editor and live preview system.",
   keywords: [
     "code editor theme",
     "vscode theme",
@@ -71,7 +72,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://themecraft.vercel.app",
+    url: "https://themecraft.top",
     title: "ThemeCraft - Professional Code Theme Editor",
     description:
       "Universal code editor theme creator with live preview. Create, customize, and export beautiful color themes for VSCode, Cursor, Zed, Neovim, and Helix.",
@@ -104,6 +105,11 @@ export const metadata: Metadata = {
     title: "ThemeCraft",
   },
 
+  // Canonical URL
+  alternates: {
+    canonical: "https://themecraft.top",
+  },
+
   // Verification & Structured Data
   other: {
     "mobile-web-app-capable": "yes",
@@ -133,25 +139,25 @@ export default function RootLayout({
       // Website Schema
       {
         "@type": "WebSite",
-        "@id": "https://themecraft.vercel.app/#website",
-        url: "https://themecraft.vercel.app",
+        "@id": "https://themecraft.top/#website",
+        url: "https://themecraft.top",
         name: "ThemeCraft - Code Theme Editor",
         description:
           "Professional code editor theme creation tool with live preview and multi-export support for VSCode, Cursor, Zed, Neovim & Helix",
         publisher: {
-          "@id": "https://themecraft.vercel.app/#organization",
+          "@id": "https://themecraft.top/#organization",
         },
         potentialAction: [
           {
             "@type": "SearchAction",
             target:
-              "https://themecraft.vercel.app/search?q={search_term_string}",
+              "https://themecraft.top/search?q={search_term_string}",
             "query-input": "required name=search_term_string",
           },
         ],
         inLanguage: "en-US",
         about: {
-          "@id": "https://themecraft.vercel.app/#software",
+          "@id": "https://themecraft.top/#software",
         },
         audience: {
           "@type": "Audience",
@@ -167,12 +173,12 @@ export default function RootLayout({
       // Organization Schema
       {
         "@type": "Organization",
-        "@id": "https://themecraft.vercel.app/#organization",
+        "@id": "https://themecraft.top/#organization",
         name: "ThemeCraft",
-        url: "https://themecraft.vercel.app",
+        url: "https://themecraft.top",
         logo: {
           "@type": "ImageObject",
-          url: "https://themecraft.vercel.app/logo.png",
+          url: "https://themecraft.top/logo.png",
           width: 512,
           height: 512,
         },
@@ -190,7 +196,7 @@ export default function RootLayout({
         },
         sameAs: [
           "https://github.com/symphoneiceattack",
-          "https://themecraft.vercel.app",
+          "https://themecraft.top",
         ],
         contactPoint: {
           "@type": "ContactPoint",
@@ -202,11 +208,11 @@ export default function RootLayout({
       // Software Application Schema
       {
         "@type": "SoftwareApplication",
-        "@id": "https://themecraft.vercel.app/#software",
+        "@id": "https://themecraft.top/#software",
         name: "ThemeCraft",
         description:
           "Advanced code editor theme creation and editing application with visual designer, live preview, and multi-format export capabilities",
-        url: "https://themecraft.vercel.app",
+        url: "https://themecraft.top",
         applicationCategory: "DevelopmentApplication",
         applicationSubCategory: "Theme Editor",
         operatingSystem: "Web Browser",
@@ -221,7 +227,7 @@ export default function RootLayout({
           url: "https://github.com/symphoneiceattack",
         },
         publisher: {
-          "@id": "https://themecraft.vercel.app/#organization",
+          "@id": "https://themecraft.top/#organization",
         },
         featureList: [
           "Visual theme editor with intuitive color controls",
@@ -238,7 +244,7 @@ export default function RootLayout({
         screenshot: [
           {
             "@type": "ImageObject",
-            url: "https://themecraft.vercel.app/screenshot-wide.jpg",
+            url: "https://themecraft.top/screenshot-wide.jpg",
             width: 1280,
             height: 720,
             caption:
@@ -246,7 +252,7 @@ export default function RootLayout({
           },
           {
             "@type": "ImageObject",
-            url: "https://themecraft.vercel.app/screenshot-narrow.jpg",
+            url: "https://themecraft.top/screenshot-narrow.jpg",
             width: 750,
             height: 1334,
             caption: "ThemeCraft mobile interface for theme editing on-the-go",
@@ -284,19 +290,19 @@ export default function RootLayout({
       // WebPage Schema
       {
         "@type": "WebPage",
-        "@id": "https://themecraft.vercel.app/#webpage",
-        url: "https://themecraft.vercel.app",
+        "@id": "https://themecraft.top/#webpage",
+        url: "https://themecraft.top",
         name: "Code Theme Editor - Create & Export Themes for VSCode, Cursor, Zed, Neovim & Helix",
         description:
           "Professional online tool for creating, customizing and exporting beautiful code editor themes. Features live preview, visual editor, and multi-format export for all major code editors.",
         isPartOf: {
-          "@id": "https://themecraft.vercel.app/#website",
+          "@id": "https://themecraft.top/#website",
         },
         about: {
-          "@id": "https://themecraft.vercel.app/#software",
+          "@id": "https://themecraft.top/#software",
         },
         mainEntity: {
-          "@id": "https://themecraft.vercel.app/#software",
+          "@id": "https://themecraft.top/#software",
         },
         inLanguage: "en-US",
         breadcrumbs: {
@@ -306,13 +312,13 @@ export default function RootLayout({
               "@type": "ListItem",
               position: 1,
               name: "Home",
-              item: "https://themecraft.vercel.app",
+              item: "https://themecraft.top",
             },
             {
               "@type": "ListItem",
               position: 2,
               name: "Theme Editor",
-              item: "https://themecraft.vercel.app/editor",
+              item: "https://themecraft.top/editor",
             },
           ],
         },
@@ -321,7 +327,7 @@ export default function RootLayout({
       // FAQ Schema
       {
         "@type": "FAQPage",
-        "@id": "https://themecraft.vercel.app/#faq",
+        "@id": "https://themecraft.top/#faq",
         mainEntity: [
           {
             "@type": "Question",
@@ -369,12 +375,12 @@ export default function RootLayout({
       // Service Schema
       {
         "@type": "Service",
-        "@id": "https://themecraft.vercel.app/#service",
+        "@id": "https://themecraft.top/#service",
         name: "Theme Design & Development Service",
         description:
           "Professional theme design and development services for code editors with custom color schemes, syntax highlighting, and UI customization",
         provider: {
-          "@id": "https://themecraft.vercel.app/#organization",
+          "@id": "https://themecraft.top/#organization",
         },
         serviceType: "Theme Design",
         audience: {
@@ -414,15 +420,15 @@ export default function RootLayout({
       // CreativeWork Schema for Documentation
       {
         "@type": "CreativeWork",
-        "@id": "https://themecraft.vercel.app/#documentation",
+        "@id": "https://themecraft.top/#documentation",
         name: "ThemeCraft Documentation",
         description:
           "Complete documentation for ThemeCraft theme editor including tutorials, guides, and API references",
         author: {
-          "@id": "https://themecraft.vercel.app/#organization",
+          "@id": "https://themecraft.top/#organization",
         },
         about: {
-          "@id": "https://themecraft.vercel.app/#software",
+          "@id": "https://themecraft.top/#software",
         },
         inLanguage: "en-US",
         educationalUse: ["Reference", "Instruction"],
@@ -454,7 +460,7 @@ export default function RootLayout({
         <meta property="article:publisher" content="ThemeCraft" />
 
         {/* Twitter Card specific meta tags */}
-        <meta name="twitter:domain" content="themecraft.vercel.app" />
+        <meta name="twitter:domain" content="themecraft.top" />
         <meta name="twitter:creator" content="@symphoneiceattack" />
         <meta name="twitter:site" content="@symphoneiceattack" />
 

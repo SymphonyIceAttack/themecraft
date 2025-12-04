@@ -33,10 +33,10 @@ export default function Home() {
                 </div>
               </div>
               <div>
-                <h1 className="text-xl font-bold bg-gradient-to-r from-foreground to-foreground/80 bg-clip-text text-transparent flex items-center gap-2">
+                <div className="text-xl font-bold bg-gradient-to-r from-foreground to-foreground/80 bg-clip-text text-transparent flex items-center gap-2">
                   ThemeCraft
                   <Sparkles className="w-4 h-4 text-accent animate-pulse" />
-                </h1>
+                </div>
                 <p className="text-sm text-muted-foreground font-medium">
                   Professional Theme Designer
                 </p>
@@ -223,7 +223,173 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Benefits section */}
+      {/* Features section */}
+      <section className="py-20 px-6">
+        <div className="container mx-auto">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-foreground to-muted-foreground bg-clip-text text-transparent mb-6">
+              Powerful Features for Theme Design
+            </h2>
+            <p className="text-lg text-muted-foreground mb-12 leading-relaxed">
+              ThemeCraft provides everything you need to create professional
+              code editor themes with ease and precision.
+            </p>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="glass-dark rounded-2xl p-6 text-left">
+                <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center mb-4">
+                  <Palette className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="font-semibold text-lg mb-3">
+                  Visual Color Editor
+                </h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  Intuitive color picker with advanced controls for precise
+                  color selection and adjustment. Supports RGB, HSL, and OKLCH
+                  color spaces.
+                </p>
+              </div>
+
+              <div className="glass-dark rounded-2xl p-6 text-left">
+                <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-600 rounded-xl flex items-center justify-center mb-4">
+                  <Code2 className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="font-semibold text-lg mb-3">
+                  Live Code Preview
+                </h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  See your theme applied to real code examples in real-time.
+                  Preview syntax highlighting for multiple programming
+                  languages.
+                </p>
+              </div>
+
+              <div className="glass-dark rounded-2xl p-6 text-left">
+                <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-red-600 rounded-xl flex items-center justify-center mb-4">
+                  <Layers className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="font-semibold text-lg mb-3">
+                  Multi-Editor Export
+                </h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  Export your themes for VSCode, Cursor, Zed, Neovim, and Helix
+                  with a single click. Automatic format conversion included.
+                </p>
+              </div>
+
+              <div className="glass-dark rounded-2xl p-6 text-left">
+                <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mb-4">
+                  <Zap className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="font-semibold text-lg mb-3">
+                  Advanced Customization
+                </h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  Fine-tune every aspect of your theme including syntax colors,
+                  UI elements, and editor styling options.
+                </p>
+              </div>
+
+              <div className="glass-dark rounded-2xl p-6 text-left">
+                <div className="w-12 h-12 bg-gradient-to-br from-teal-500 to-cyan-600 rounded-xl flex items-center justify-center mb-4">
+                  <BookOpen className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="font-semibold text-lg mb-3">Theme Library</h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  Browse and import themes from our growing community library.
+                  Share your creations with other developers.
+                </p>
+              </div>
+
+              <div className="glass-dark rounded-2xl p-6 text-left">
+                <div className="w-12 h-12 bg-gradient-to-br from-indigo-500 to-blue-600 rounded-xl flex items-center justify-center mb-4">
+                  <Users className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="font-semibold text-lg mb-3">
+                  Collaboration Tools
+                </h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  Work together on themes with real-time collaboration features.
+                  Version control and sharing capabilities included.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* How it works section */}
+      <section className="py-20 px-6 bg-gradient-to-r from-primary/5 via-accent/5 to-primary/5">
+        <div className="container mx-auto">
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-foreground to-muted-foreground bg-clip-text text-transparent mb-12">
+              How ThemeCraft Works
+            </h2>
+
+            <div className="space-y-8">
+              <div className="flex items-start gap-4 text-left">
+                <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0 mt-1">
+                  1
+                </div>
+                <div>
+                  <h3 className="font-semibold text-lg mb-2">
+                    Choose Your Base Theme
+                  </h3>
+                  <p className="text-muted-foreground">
+                    Start with one of our professionally designed base themes or
+                    begin from scratch with a blank canvas.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-4 text-left">
+                <div className="w-8 h-8 bg-accent rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0 mt-1">
+                  2
+                </div>
+                <div>
+                  <h3 className="font-semibold text-lg mb-2">
+                    Customize with Visual Editor
+                  </h3>
+                  <p className="text-muted-foreground">
+                    Use our intuitive visual editor to adjust colors, fonts, and
+                    styling options. Make changes with real-time preview.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-4 text-left">
+                <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0 mt-1">
+                  3
+                </div>
+                <div>
+                  <h3 className="font-semibold text-lg mb-2">
+                    Preview on Real Code
+                  </h3>
+                  <p className="text-muted-foreground">
+                    See how your theme looks with actual code samples in
+                    multiple programming languages and frameworks.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-4 text-left">
+                <div className="w-8 h-8 bg-accent rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0 mt-1">
+                  4
+                </div>
+                <div>
+                  <h3 className="font-semibold text-lg mb-2">
+                    Export & Install
+                  </h3>
+                  <p className="text-muted-foreground">
+                    Export your theme in the correct format for your code editor
+                    and install it instantly with one click.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       <section className="py-20 px-6">
         <div className="container mx-auto">
           <div className="max-w-3xl mx-auto text-center">

@@ -1,13 +1,61 @@
 {
   "name": "themecraft",
   "version": "0.1.0",
-  "private": true,
+  "description": "Professional Code Editor Theme Designer & Visual Editor - Create stunning themes for VSCode, Cursor, Zed, Neovim, and Helix with our intuitive visual editor and live preview system.",
+  "author": {
+    "name": "SymphoneIceAttack",
+    "email": "contact@themecraft.top",
+    "url": "https://github.com/symponeiceattack"
+  },
+  "license": "MIT",
+  "homepage": "https://themecraft.top",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/symphoneiceattack/themecraft.git"
+  },
+  "bugs": {
+    "url": "https://github.com/symphoneiceattack/themecraft/issues"
+  },
+  "keywords": [
+    "theme-editor",
+    "code-editor-theme",
+    "vscode-theme",
+    "cursor-theme",
+    "zed-theme",
+    "neovim-colorscheme",
+    "helix-theme",
+    "color-scheme-generator",
+    "syntax-highlighting",
+    "theme-creator",
+    "visual-theme-designer",
+    "code-customization",
+    "developer-tools",
+    "productivity-tools",
+    "color-palette",
+    "nextjs",
+    "react",
+    "typescript",
+    "tailwindcss",
+    "web-app"
+  ],
+  "private": false,
+  "packageManager": "pnpm@9.0.0",
+  "engines": {
+    "node": ">=18.0.0",
+    "pnpm": ">=8.0.0"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "biome check",
-    "format": "biome format --write"
+    "lint:fix": "biome check --apply",
+    "format": "biome format --write",
+    "type-check": "tsc --noEmit",
+    "clean": "rm -rf .next dist node_modules/.cache .turbo",
+    "reinstall": "rm -rf node_modules pnpm-lock.yaml && pnpm install",
+    "preinstall": "npx only-allow pnpm",
+    "postinstall": "next telemetry disable || true"
   },
   "dependencies": {
     "@directus/sdk": "^20.1.0",

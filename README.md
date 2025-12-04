@@ -1,36 +1,240 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ThemeCraft 🎨
 
-## Getting Started
+<div align="center">
 
-First, run the development server:
+**Professional Code Editor Theme Designer & Visual Editor**
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+Create stunning themes for VSCode, Cursor, Zed, Neovim, and Helix with our intuitive visual editor and live preview system.
+
+[![Deploy with Vercel](https://vercel.com/button)](https://themecraft.top)
+[![Next.js](https://img.shields.io/badge/Next.js-16-black?logo=next.js)](https://nextjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?logo=typescript)](https://www.typescriptlang.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4-38B2AC?logo=tailwind-css)](https://tailwindcss.com/)
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![GitHub stars](https://img.shields.io/github/stars/symphoneiceattack/themecraft.svg?style=social&label=Star)](https://github.com/symphoneiceattack/themecraft)
+[![GitHub forks](https://img.shields.io/github/forks/symphoneiceattack/themecraft.svg?style=social&label=Fork)](https://github.com/symphoneiceattack/themecraft)
+
+**Live Demo** • **[Documentation](https://themecraft.top/docs)** • **[Blog](https://themecraft.top/posts)** • **[FAQ](https://themecraft.top/faq)**
+
+</div>
+
+## ✨ Features
+
+### 🎨 Visual Theme Editor
+- **Intuitive Color Controls**: Advanced color picker with RGB, HSL, and OKLCH support
+- **Real-time Preview**: See your theme applied to actual code samples instantly
+- **Professional Tools**: Industry-standard color management and fine-tuning options
+
+### 🔧 Multi-Editor Support
+- **VSCode Themes**: Generate complete `.json` theme files
+- **Cursor Themes**: Export for Cursor IDE compatibility
+- **Zed Themes**: Support for Zed editor color schemes
+- **Neovim Colorscheme**: Lua-based colorscheme generation
+- **Helix Themes**: TOML configuration support
+
+### 📱 Modern Interface
+- **Responsive Design**: Works perfectly on desktop and mobile
+- **Dark/Light Mode**: Seamless theme switching
+- **Glass Morphism UI**: Beautiful, modern interface design
+- **Real-time Collaboration**: Share and collaborate on themes
+
+### 🚀 Advanced Features
+- **Import/Export**: Support for existing theme files
+- **Color Accessibility**: WCAG compliance checking
+- **Version Control**: Track theme changes and history
+- **Community Library**: Browse and import community themes
+- **One-Click Install**: Direct installation to supported editors
+
+## 🖼️ Screenshots
+
+<div align="center">
+
+### Main Interface
+![ThemeCraft Main Interface](public/screenshot-wide.jpg)
+
+### Mobile Interface
+![ThemeCraft Mobile](public/screenshot-narrow.jpg)
+
+### Theme Editor
+![Theme Editor Preview](public/images/theme-editor-demo.png)
+
+</div>
+
+## 🚀 Quick Start
+
+### Prerequisites
+- Node.js 18+
+- pnpm (recommended package manager)
+
+### Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/symphoneiceattack/themecraft.git
+   cd themecraft
+   ```
+
+2. **Install pnpm** (if you don't have it)
+   ```bash
+   npm install -g pnpm
+   ```
+
+3. **Install dependencies**
+   ```bash
+   pnpm install
+   ```
+
+4. **Start development server**
+   ```bash
+   pnpm dev
+   ```
+
+5. **Open your browser**
+   Navigate to [https://themecraft.top](https://themecraft.top)
+
+## 📖 Usage Guide
+
+### Creating Your First Theme
+
+1. **Start Designing**
+   - Visit the [Theme Editor](https://themecraft.top/editor)
+   - Choose a base theme or start from scratch
+
+2. **Customize Colors**
+   - Use the visual color picker
+   - Adjust syntax highlighting colors
+   - Modify UI elements
+
+3. **Preview Your Theme**
+   - View real-time code preview
+   - Test with different programming languages
+   - Check accessibility compliance
+
+4. **Export & Install**
+   - Select your target editor
+   - Download the theme file
+   - Install directly in your code editor
+
+### Supported Editors
+
+| Editor | Format | Installation |
+|--------|--------|-------------|
+| **VSCode** | `.json` | Extensions folder |
+| **Cursor** | `.json` | User settings |
+| **Zed** | `.toml` | Settings |
+| **Neovim** | `.lua` | Colors folder |
+| **Helix** | `.toml` | Config folder |
+
+## 🛠️ Technology Stack
+
+### Frontend
+- **[Next.js 16](https://nextjs.org/)** - React framework with App Router
+- **[React 19](https://react.dev/)** - UI library with latest features
+- **[TypeScript](https://www.typescriptlang.org/)** - Type-safe JavaScript
+- **[Tailwind CSS 4](https://tailwindcss.com/)** - Utility-first CSS framework
+
+### UI & Components
+- **[Radix UI](https://www.radix-ui.com/)** - Accessible UI primitives
+- **[shadcn/ui](https://ui.shadcn.com/)** - Beautiful component library
+- **[Lucide React](https://lucide.dev/)** - Icon library
+- **[Class Variance Authority](https://cva.style/)** - Type-safe component variants
+
+### Tools & Services
+- **[Biome](https://biomejs.dev/)** - Linting and formatting
+- **[Vercel Analytics](https://vercel.com/analytics)** - Performance monitoring
+- **[Directus](https://directus.io/)** - CMS for blog content
+- **[Shiki](https://shiki.matsu.io/)** - Syntax highlighting
+
+### Development
+- **[ESLint](https://eslint.org/)** - Code quality
+- **[Prettier](https://prettier.io/)** - Code formatting
+- **[GitHub Actions](https://github.com/features/actions)** - CI/CD pipeline
+
+## 📁 Project Structure
+
+```
+themecraft/
+├── app/                    # Next.js App Router
+│   ├── layout.tsx         # Root layout
+│   ├── page.tsx           # Homepage
+│   ├── editor/            # Theme editor
+│   ├── posts/             # Blog posts
+│   ├── api/               # API routes
+│   └── globals.css        # Global styles
+├── components/            # React components
+│   ├── ui/               # shadcn/ui components
+│   ├── theme-editor.tsx  # Main editor
+│   ├── code-preview.tsx  # Live preview
+│   └── export-dialog.tsx # Export functionality
+├── lib/                   # Utility functions
+│   ├── utils.ts          # Common utilities
+│   ├── color-utils.ts    # Color manipulation
+│   └── theme-converters.ts # Format converters
+├── types/                 # TypeScript definitions
+└── public/               # Static assets
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🤝 Contributing
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+We welcome contributions! Please read our [Contributing Guide](CONTRIBUTING.md) for details on our code of conduct and the process for submitting pull requests.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Development Setup
 
-## Learn More
+1. Fork the repository
+2. Create a feature branch: `git checkout -b feature/amazing-feature`
+3. Make your changes
+4. Run tests and linting: `npm run lint`
+5. Commit your changes: `git commit -m 'Add amazing feature'`
+6. Push to the branch: `git push origin feature/amazing-feature`
+7. Open a Pull Request
 
-To learn more about Next.js, take a look at the following resources:
+### Contribution Guidelines
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Follow our code style guidelines
+- Add tests for new features
+- Update documentation as needed
+- Ensure all tests pass
+- Write descriptive commit messages
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 📝 License
 
-## Deploy on Vercel
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🌟 Show Your Support
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+If you find ThemeCraft helpful, please consider:
+
+- ⭐ **Starring** this repository
+- 🔗 **Sharing** with other developers
+- 🐛 **Reporting** bugs and issues
+- 💡 **Suggesting** new features
+- 🤝 **Contributing** to the project
+
+## 📧 Contact & Support
+
+- **Website**: [https://themecraft.top](https://themecraft.top)
+- **GitHub**: [@symphoneiceattack](https://github.com/symphoneiceattack)
+- **Twitter**: [@symphoneiceattack](https://twitter.com/symphoneiceattack)
+- **Blog**: [ThemeCraft Blog](https://themecraft.top/posts)
+
+## 🙏 Acknowledgments
+
+- **Vercel** - For amazing hosting and deployment
+- **Next.js Team** - For the incredible framework
+- **React Team** - For the amazing UI library
+- **Tailwind CSS** - For the utility-first CSS framework
+- **Community** - For feedback and contributions
+
+## 📊 SEO Keywords
+
+*code editor theme*, *vscode theme*, *cursor theme*, *zed theme*, *neovim colorscheme*, *helix theme*, *theme editor*, *color scheme generator*, *syntax highlighting themes*, *theme creator*, *code editor customization*, *visual theme designer*, *code syntax colors*, *developer tools*, *productivity tools*, *code styling*, *theme library*, *color palette generator*, *syntax highlighting editor*, *code color schemes*
+
+---
+
+<div align="center">
+
+**Made with ❤️ by [SymphoneIceAttack](https://github.com/symphoneiceattack)**
+
+[⬆️ Back to Top](#themecraft-)
+
+</div>
