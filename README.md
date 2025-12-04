@@ -6,7 +6,7 @@
 
 Create stunning themes for VSCode, Cursor, Zed, Neovim, and Helix with our intuitive visual editor and live preview system.
 
-[![Deploy with Vercel](https://vercel.com/button)](https://themecraft.top)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/SymphonyIceAttack/themecraft?tab=readme-ov-file)
 [![Next.js](https://img.shields.io/badge/Next.js-16-black?logo=next.js)](https://nextjs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?logo=typescript)](https://www.typescriptlang.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4-38B2AC?logo=tailwind-css)](https://tailwindcss.com/)
@@ -45,20 +45,6 @@ Create stunning themes for VSCode, Cursor, Zed, Neovim, and Helix with our intui
 - **Community Library**: Browse and import community themes
 - **One-Click Install**: Direct installation to supported editors
 
-## 🖼️ Screenshots
-
-<div align="center">
-
-### Main Interface
-![ThemeCraft Main Interface](public/screenshot-wide.jpg)
-
-### Mobile Interface
-![ThemeCraft Mobile](public/screenshot-narrow.jpg)
-
-### Theme Editor
-![Theme Editor Preview](public/images/theme-editor-demo.png)
-
-</div>
 
 ## 🚀 Quick Start
 
