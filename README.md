@@ -1,6 +1,8 @@
-# ThemeCraft 🎨
-
 <div align="center">
+
+<img src="public/logo.png" alt="ThemeCraft Logo" width="120">
+
+# ThemeCraft 🎨
 
 **Professional Code Editor Theme Designer & Visual Editor**
 
@@ -11,14 +13,14 @@ Create stunning themes for VSCode, Cursor, Zed, Neovim, and Helix with our intui
 [![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?logo=typescript)](https://www.typescriptlang.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4-38B2AC?logo=tailwind-css)](https://tailwindcss.com/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![GitHub stars](https://img.shields.io/github/stars/symphoneiceattack/themecraft.svg?style=social&label=Star)](https://github.com/symphoneiceattack/themecraft)
-[![GitHub forks](https://img.shields.io/github/forks/symphoneiceattack/themecraft.svg?style=social&label=Fork)](https://github.com/symphoneiceattack/themecraft)
+[![GitHub stars](https://img.shields.io/github/stars/SymphonyIceAttack/themecraft.svg?style=social&label=Star)](https://github.com/SymphonyIceAttack/themecraft)
+[![GitHub forks](https://img.shields.io/github/forks/SymphonyIceAttack/themecraft.svg?style=social&label=Fork)](https://github.com/SymphonyIceAttack/themecraft)
 
-**Live Demo** • **[Documentation](https://themecraft.top/docs)** • **[Blog](https://themecraft.top/posts)** • **[FAQ](https://themecraft.top/faq)**
+**Live Demo** • **[Theme Editor](https://themecraft.top/editor)** • **[Documentation](https://themecraft.top/docs)** • **[Blog](https://themecraft.top/posts)** • **[FAQ](https://themecraft.top/faq)**
 
 </div>
 
-## ✨ Features
+## ✨ Key Features
 
 ### 🎨 Visual Theme Editor
 - **Intuitive Color Controls**: Advanced color picker with RGB, HSL, and OKLCH support
@@ -38,14 +40,6 @@ Create stunning themes for VSCode, Cursor, Zed, Neovim, and Helix with our intui
 - **Glass Morphism UI**: Beautiful, modern interface design
 - **Real-time Collaboration**: Share and collaborate on themes
 
-### 🚀 Advanced Features
-- **Import/Export**: Support for existing theme files
-- **Color Accessibility**: WCAG compliance checking
-- **Version Control**: Track theme changes and history
-- **Community Library**: Browse and import community themes
-- **One-Click Install**: Direct installation to supported editors
-
-
 ## 🚀 Quick Start
 
 ### Prerequisites
@@ -56,7 +50,7 @@ Create stunning themes for VSCode, Cursor, Zed, Neovim, and Helix with our intui
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/symphoneiceattack/themecraft.git
+   git clone https://github.com/SymphonyIceAttack/themecraft.git
    cd themecraft
    ```
 
@@ -113,7 +107,7 @@ Create stunning themes for VSCode, Cursor, Zed, Neovim, and Helix with our intui
 
 ## 🛠️ Technology Stack
 
-### Frontend
+### Core Technologies
 - **[Next.js 16](https://nextjs.org/)** - React framework with App Router
 - **[React 19](https://react.dev/)** - UI library with latest features
 - **[TypeScript](https://www.typescriptlang.org/)** - Type-safe JavaScript
@@ -125,30 +119,25 @@ Create stunning themes for VSCode, Cursor, Zed, Neovim, and Helix with our intui
 - **[Lucide React](https://lucide.dev/)** - Icon library
 - **[Class Variance Authority](https://cva.style/)** - Type-safe component variants
 
-### Tools & Services
+### Development Tools
 - **[Biome](https://biomejs.dev/)** - Linting and formatting
 - **[Vercel Analytics](https://vercel.com/analytics)** - Performance monitoring
 - **[Directus](https://directus.io/)** - CMS for blog content
 - **[Shiki](https://shiki.matsu.io/)** - Syntax highlighting
-
-### Development
-- **[ESLint](https://eslint.org/)** - Code quality
-- **[Prettier](https://prettier.io/)** - Code formatting
-- **[GitHub Actions](https://github.com/features/actions)** - CI/CD pipeline
 
 ## 📁 Project Structure
 
 ```
 themecraft/
 ├── app/                    # Next.js App Router
-│   ├── layout.tsx         # Root layout
+│   ├── layout.tsx         # Root layout with providers
 │   ├── page.tsx           # Homepage
 │   ├── editor/            # Theme editor
 │   ├── posts/             # Blog posts
 │   ├── api/               # API routes
 │   └── globals.css        # Global styles
 ├── components/            # React components
-│   ├── ui/               # shadcn/ui components
+│   ├── ui/               # shadcn/ui base components
 │   ├── theme-editor.tsx  # Main editor
 │   ├── code-preview.tsx  # Live preview
 │   └── export-dialog.tsx # Export functionality
@@ -199,8 +188,8 @@ If you find ThemeCraft helpful, please consider:
 ## 📧 Contact & Support
 
 - **Website**: [https://themecraft.top](https://themecraft.top)
-- **GitHub**: [@symphoneiceattack](https://github.com/symphoneiceattack)
-- **Twitter**: [@symphoneiceattack](https://twitter.com/symphoneiceattack)
+- **GitHub Repository**: [https://github.com/SymphonyIceAttack/themecraft](https://github.com/SymphonyIceAttack/themecraft)
+- **Developer**: [@SymphonyIceAttack](https://github.com/SymphonyIceAttack)
 - **Blog**: [ThemeCraft Blog](https://themecraft.top/posts)
 
 ## 🙏 Acknowledgments
@@ -219,7 +208,10 @@ If you find ThemeCraft helpful, please consider:
 
 <div align="center">
 
-**Made with ❤️ by [SymphoneIceAttack](https://github.com/symphoneiceattack)**
+**Made with ❤️ by [SymphonyIceAttack](https://github.com/SymphonyIceAttack)**
+
+[![GitHub stars](https://img.shields.io/github/stars/SymphonyIceAttack/themecraft.svg?style=social&label=Star)](https://github.com/SymphonyIceAttack/themecraft)
+[![GitHub forks](https://img.shields.io/github/forks/SymphonyIceAttack/themecraft.svg?style=social&label=Fork)](https://github.com/SymphonyIceAttack/themecraft)
 
 [⬆️ Back to Top](#themecraft-)
 

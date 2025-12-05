@@ -1,7 +1,5 @@
 import { ImageResponse } from "next/og";
 
-export const runtime = "edge";
-
 export const alt =
   "ThemeCraft - Create and export custom themes for VSCode, Cursor, Zed, Neovim, and Helix";
 export const size = {

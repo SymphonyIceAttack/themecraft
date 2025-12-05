@@ -54,8 +54,7 @@
     "type-check": "tsc --noEmit",
     "clean": "rm -rf .next dist node_modules/.cache .turbo",
     "reinstall": "rm -rf node_modules pnpm-lock.yaml && pnpm install",
-    "preinstall": "npx only-allow pnpm",
-    "postinstall": "next telemetry disable || true"
+    "preinstall": "npx only-allow pnpm"
   },
   "dependencies": {
     "@directus/sdk": "^20.1.0",
@@ -73,7 +72,7 @@
     "lucide-react": "^0.552.0",
     "next": "16.0.7",
     "next-themes": "^0.4.6",
-    "react": "19.2.0",
+    "react": "19.2.1",
     "react-dom": "19.2.0",
     "shiki": "^3.14.0",
     "sonner": "^2.0.7",

@@ -3,6 +3,7 @@
 import {
   BookOpen,
   Code2,
+  Github,
   Layers,
   Menu,
   Palette,
@@ -80,6 +81,15 @@ export default function Home() {
                 <Palette className="w-4 h-4 group-hover:scale-110 transition-transform" />
                 Start Designing
               </Link>
+              <a
+                href="https://github.com/SymphonyIceAttack/themecraft"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-accent/20 transition-all duration-300 group"
+              >
+                <Github className="w-4 h-4 group-hover:scale-110 transition-transform" />
+                GitHub
+              </a>
               <ThemeModeToggle />
             </nav>
 
@@ -141,6 +151,16 @@ export default function Home() {
                   <Palette className="w-4 h-4" />
                   Start Designing
                 </Link>
+                <a
+                  href="https://github.com/SymphonyIceAttack/themecraft"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-3 px-4 py-3 rounded-lg text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-accent/20 transition-all duration-200"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  <Github className="w-4 h-4" />
+                  GitHub
+                </a>
               </nav>
             </div>
           )}
@@ -465,19 +485,159 @@ export default function Home() {
               Join thousands of developers who use ThemeCraft to create
               stunning, professional code editor themes.
             </p>
-            <Link href="/editor">
-              <Button
-                size="lg"
-                className="gap-3 bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 transition-all duration-300 hover:scale-105 hover:shadow-xl shadow-primary/30 relative overflow-hidden group border-0 px-8 py-4 text-lg font-semibold"
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <Link href="/editor">
+                <Button
+                  size="lg"
+                  className="gap-3 bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 transition-all duration-300 hover:scale-105 hover:shadow-xl shadow-primary/30 relative overflow-hidden group border-0 px-8 py-4 text-lg font-semibold"
+                >
+                  <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 -translate-x-full group-hover:translate-x-full transition-transform duration-700" />
+                  <Code2 className="w-5 h-5 relative z-10" />
+                  <span className="relative z-10">Start Creating Now</span>
+                </Button>
+              </Link>
+              <a
+                href="https://github.com/SymphonyIceAttack/themecraft"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 -translate-x-full group-hover:translate-x-full transition-transform duration-700" />
-                <Code2 className="w-5 h-5 relative z-10" />
-                <span className="relative z-10">Start Creating Now</span>
-              </Button>
-            </Link>
+                <Button
+                  variant="outline"
+                  size="lg"
+                  className="gap-3 px-8 py-4 text-lg font-semibold border-2 hover:bg-accent/20 transition-all duration-300"
+                >
+                  <Github className="w-5 h-5" />
+                  View on GitHub
+                </Button>
+              </a>
+            </div>
           </div>
         </div>
       </section>
+
+      {/* Footer section */}
+      <footer className="py-12 px-6 bg-background border-t border-border/30">
+        <div className="container mx-auto">
+          <div className="max-w-4xl mx-auto">
+            <div className="grid md:grid-cols-3 gap-8 mb-8">
+              {/* Brand section */}
+              <div className="space-y-4">
+                <div className="flex items-center gap-3">
+                  <div className="bg-gradient-to-br from-primary/10 to-accent/10 rounded-xl p-2 border border-border/50">
+                    <Code2 className="w-6 h-6 text-primary" />
+                  </div>
+                  <div>
+                    <div className="text-lg font-bold bg-gradient-to-r from-foreground to-foreground/80 bg-clip-text text-transparent">
+                      ThemeCraft
+                    </div>
+                    <p className="text-sm text-muted-foreground">
+                      Professional Theme Designer
+                    </p>
+                  </div>
+                </div>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  Create stunning code editor themes with our professional
+                  visual editor and live preview system.
+                </p>
+              </div>
+
+              {/* Quick links */}
+              <div className="space-y-4">
+                <h3 className="font-semibold text-foreground">Quick Links</h3>
+                <div className="space-y-2">
+                  <Link
+                    href="/editor"
+                    className="block text-sm text-muted-foreground hover:text-foreground transition-colors"
+                  >
+                    Theme Editor
+                  </Link>
+                  <Link
+                    href="/posts"
+                    className="block text-sm text-muted-foreground hover:text-foreground transition-colors"
+                  >
+                    Blog
+                  </Link>
+                  <Link
+                    href="/faq"
+                    className="block text-sm text-muted-foreground hover:text-foreground transition-colors"
+                  >
+                    FAQ
+                  </Link>
+                  <Link
+                    href="/about"
+                    className="block text-sm text-muted-foreground hover:text-foreground transition-colors"
+                  >
+                    About
+                  </Link>
+                </div>
+              </div>
+
+              {/* Community & Support */}
+              <div className="space-y-4">
+                <h3 className="font-semibold text-foreground">
+                  Community & Support
+                </h3>
+                <div className="space-y-2">
+                  <a
+                    href="https://github.com/SymphonyIceAttack/themecraft"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
+                  >
+                    <Github className="w-4 h-4" />
+                    GitHub Repository
+                  </a>
+                  <Link
+                    href="/contact"
+                    className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
+                  >
+                    <Users className="w-4 h-4" />
+                    Contact Us
+                  </Link>
+                  <a
+                    href="https://github.com/SymphonyIceAttack/themecraft/issues"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
+                  >
+                    <Zap className="w-4 h-4" />
+                    Report Issues
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            {/* Bottom bar */}
+            <div className="pt-8 border-t border-border/30 flex flex-col sm:flex-row justify-between items-center gap-4">
+              <div className="text-sm text-muted-foreground">
+                © 2024 ThemeCraft. Made with ❤️ by{" "}
+                <a
+                  href="https://github.com/SymphonyIceAttack"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-primary hover:text-primary/80 transition-colors"
+                >
+                  SymphonyIceAttack
+                </a>
+              </div>
+              <div className="flex items-center gap-4">
+                <a
+                  href="https://github.com/SymphonyIceAttack/themecraft"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  <Github className="w-4 h-4" />
+                  Star on GitHub
+                </a>
+                <span className="text-sm text-muted-foreground">
+                  MIT License
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }
