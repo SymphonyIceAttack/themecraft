@@ -1,32 +1,9 @@
 # robots.txt for ThemeCraft
-# https://themecraft.dev
+# https://themecraft.top
 
 User-agent: *
 Allow: /
-
-# Allow all major search engines
-User-agent: Googlebot
-Allow: /
-
-User-agent: Bingbot
-Allow: /
-
-User-agent: Slurp
-Allow: /
-
-# Disallow admin or internal pages if any
-# Disallow: /admin/
-# Disallow: /api/
+Disallow: /api/
 
 # Sitemap location
-Sitemap: https://themecraft.dev/sitemap.xml
-
-# Crawl-delay (optional - helps prevent server overload)
-Crawl-delay: 1
-
-# Special rules for specific bots
-User-agent: AhrefsBot
-Crawl-delay: 10
-
-User-agent: SemrushBot
-Crawl-delay: 10
+Sitemap: https://themecraft.top/sitemap.xml

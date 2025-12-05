@@ -36,9 +36,9 @@ export default function AboutPage() {
                 </div>
               </div>
               <div>
-                <h1 className="text-xl font-bold bg-gradient-to-r from-foreground to-foreground/80 bg-clip-text text-transparent">
+                <span className="text-xl font-bold bg-gradient-to-r from-foreground to-foreground/80 bg-clip-text text-transparent block">
                   ThemeCraft
-                </h1>
+                </span>
                 <p className="text-sm text-muted-foreground font-medium">
                   About Us
                 </p>

@@ -12,11 +12,11 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://themecraft.top"),
   title: {
     default:
-      "ThemeCraft - Professional Code Editor Theme Designer & Visual Editor",
-    template: "%s | ThemeCraft - Code Theme Designer",
+      "ThemeCraft - Code Editor Theme Designer | VSCode, Cursor, Zed Themes",
+    template: "%s | ThemeCraft",
   },
   description:
-    "Create stunning code editor themes for VSCode, Cursor, Zed, Neovim & Helix with our professional visual editor and live preview system.",
+    "Create beautiful code themes for VSCode, Cursor, Zed, Neovim & Helix with live preview. Free visual theme editor.",
   keywords: [
     "code editor theme",
     "vscode theme",

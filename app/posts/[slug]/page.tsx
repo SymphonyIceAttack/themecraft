@@ -38,7 +38,7 @@ function BlogNavigation() {
               </div>
             </div>
             <div>
-              <h1 className="text-xl font-bold bg-gradient-to-r from-foreground to-foreground/80 bg-clip-text text-transparent flex items-center gap-2">
+              <span className="text-xl font-bold bg-gradient-to-r from-foreground to-foreground/80 bg-clip-text text-transparent flex items-center gap-2">
                 ThemeCraft
                 <svg
                   className="w-4 h-4 text-accent animate-pulse"
@@ -53,7 +53,7 @@ function BlogNavigation() {
                     d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"
                   />
                 </svg>
-              </h1>
+              </span>
               <p className="text-sm text-muted-foreground font-medium">
                 Professional Theme Designer
               </p>
