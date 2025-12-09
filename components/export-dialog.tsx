@@ -27,6 +27,7 @@ interface ExportDialogProps {
   open: boolean;
   onOpenChange: (open: boolean) => void;
   theme: VSCodeTheme;
+  defaultEditor?: EditorType;
 }
 
 const EDITOR_OPTIONS = [
@@ -67,8 +68,14 @@ const EDITOR_OPTIONS = [
   },
 ] as const;
 
-export function ExportDialog({ open, onOpenChange, theme }: ExportDialogProps) {
-  const [selectedEditor, setSelectedEditor] = useState<EditorType>("vscode");
+export function ExportDialog({
+  open,
+  onOpenChange,
+  theme,
+  defaultEditor = "vscode",
+}: ExportDialogProps) {
+  const [selectedEditor, setSelectedEditor] =
+    useState<EditorType>(defaultEditor);
   const exportFormat = convertTheme(theme, selectedEditor);
   const themeContent = exportFormat.content;
 

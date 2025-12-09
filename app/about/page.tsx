@@ -11,13 +11,13 @@ import {
 } from "@/components/ui/card";
 
 export const metadata: Metadata = {
-  title: "About Us - ThemeCraft | Professional Theme Designer",
+  title: "About Us - ThemeCraft | Code Editor Theme Creator",
   description:
-    "Learn about ThemeCraft - the professional theme designer for VSCode, Cursor, Zed, Neovim, and Helix. Our mission is to make theme creation effortless.",
+    "Learn about ThemeCraft - the code editor theme creator for VSCode, Cursor, Zed, Neovim, and Helix. Our mission is to make theme creation effortless.",
   openGraph: {
     title: "About Us - ThemeCraft",
     description:
-      "Professional theme designer for code editors. Create beautiful themes with our visual editor.",
+      "Code editor theme designer and developer. Create beautiful themes with our visual editor.",
   },
 };
 

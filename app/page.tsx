@@ -39,7 +39,7 @@ export default function Home() {
                   <Sparkles className="w-4 h-4 text-accent animate-pulse" />
                 </div>
                 <p className="text-sm text-muted-foreground font-medium">
-                  Professional Theme Designer
+                  Code Editor Theme Creator
                 </p>
               </div>
             </Link>
@@ -238,6 +238,143 @@ export default function Home() {
                   Support for 5+ code editors
                 </p>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Editor-specific pages section */}
+      <section className="py-20 px-6">
+        <div className="container mx-auto">
+          <div className="max-w-6xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-foreground to-muted-foreground bg-clip-text text-transparent mb-6">
+              Specialized Theme Creators
+            </h2>
+            <p className="text-lg text-muted-foreground mb-12 leading-relaxed">
+              Choose your editor and get specialized tools optimized for your
+              workflow.
+            </p>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {/* VS Code */}
+              <Link
+                href="/vscode-theme-creator"
+                className="group glass-dark rounded-2xl p-6 hover:scale-105 transition-all duration-300 border border-border/30 hover:border-primary/50"
+              >
+                <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                  <Code2 className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="font-semibold text-lg mb-2 text-foreground group-hover:text-primary transition-colors">
+                  VS Code Theme Creator
+                </h3>
+                <p className="text-sm text-muted-foreground mb-3">
+                  Create stunning Visual Studio Code themes with specialized
+                  controls and export options.
+                </p>
+                <div className="text-xs text-primary font-medium">
+                  Create VS Code Themes →
+                </div>
+              </Link>
+
+              {/* Cursor */}
+              <Link
+                href="/cursor-theme-generator"
+                className="group glass-dark rounded-2xl p-6 hover:scale-105 transition-all duration-300 border border-border/30 hover:border-blue-500/50"
+              >
+                <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-purple-700 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                  <Palette className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="font-semibold text-lg mb-2 text-foreground group-hover:text-blue-500 transition-colors">
+                  Cursor Theme Generator
+                </h3>
+                <p className="text-sm text-muted-foreground mb-3">
+                  Design beautiful themes for Cursor editor with AI-powered
+                  syntax highlighting support.
+                </p>
+                <div className="text-xs text-blue-500 font-medium">
+                  Generate Cursor Themes →
+                </div>
+              </Link>
+
+              {/* Zed */}
+              <Link
+                href="/zed-theme-maker"
+                className="group glass-dark rounded-2xl p-6 hover:scale-105 transition-all duration-300 border border-border/30 hover:border-emerald-500/50"
+              >
+                <div className="w-12 h-12 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                  <Zap className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="font-semibold text-lg mb-2 text-foreground group-hover:text-emerald-500 transition-colors">
+                  Zed Theme Maker
+                </h3>
+                <p className="text-sm text-muted-foreground mb-3">
+                  Create lightning-fast themes for Zed editor with
+                  high-performance rendering.
+                </p>
+                <div className="text-xs text-emerald-500 font-medium">
+                  Make Zed Themes →
+                </div>
+              </Link>
+
+              {/* Neovim */}
+              <Link
+                href="/neovim-colorscheme-generator"
+                className="group glass-dark rounded-2xl p-6 hover:scale-105 transition-all duration-300 border border-border/30 hover:border-green-500/50"
+              >
+                <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-teal-600 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                  <Layers className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="font-semibold text-lg mb-2 text-foreground group-hover:text-green-500 transition-colors">
+                  Neovim Colorscheme Generator
+                </h3>
+                <p className="text-sm text-muted-foreground mb-3">
+                  Generate custom neovim colorschemes with Lua support and
+                  terminal integration.
+                </p>
+                <div className="text-xs text-green-500 font-medium">
+                  Generate Neovim Colorschemes →
+                </div>
+              </Link>
+
+              {/* Helix */}
+              <Link
+                href="/helix-theme-editor"
+                className="group glass-dark rounded-2xl p-6 hover:scale-105 transition-all duration-300 border border-border/30 hover:border-amber-500/50"
+              >
+                <div className="w-12 h-12 bg-gradient-to-br from-amber-500 to-orange-600 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                  <Sparkles className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="font-semibold text-lg mb-2 text-foreground group-hover:text-amber-500 transition-colors">
+                  Helix Theme Editor
+                </h3>
+                <p className="text-sm text-muted-foreground mb-3">
+                  Design themes for Helix editor with tree-sitter syntax
+                  highlighting and modal editing.
+                </p>
+                <div className="text-xs text-amber-500 font-medium">
+                  Edit Helix Themes →
+                </div>
+              </Link>
+
+              {/* Universal Editor */}
+              <Link
+                href="/editor"
+                className="group glass-dark rounded-2xl p-6 hover:scale-105 transition-all duration-300 border border-border/30 hover:border-primary/50 bg-gradient-to-br from-primary/5 to-accent/5"
+              >
+                <div className="w-12 h-12 bg-gradient-to-br from-primary to-accent rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                  <Code2 className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="font-semibold text-lg mb-2 text-foreground group-hover:text-primary transition-colors">
+                  Universal Theme Editor
+                </h3>
+                <p className="text-sm text-muted-foreground mb-3">
+                  Create themes for all editors with our comprehensive visual
+                  editor and multi-export system.
+                </p>
+                <div className="text-xs text-primary font-medium">
+                  Universal Editor →
+                </div>
+              </Link>
             </div>
           </div>
         </div>

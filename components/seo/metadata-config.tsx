@@ -11,12 +11,11 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL("https://themecraft.top"),
   title: {
-    default:
-      "ThemeCraft - Code Editor Theme Designer | VSCode, Cursor, Zed Themes",
-    template: "%s | ThemeCraft",
+    default: "Code Editor Theme Creator",
+    template: "%s | ThemeCraft - Code Editor Themes",
   },
   description:
-    "Create beautiful code themes for VSCode, Cursor, Zed, Neovim & Helix with live preview. Free visual theme editor.",
+    "Create beautiful code editor themes for VSCode, Cursor, Zed, Neovim & Helix with live preview. Free visual theme editor for developers and programmers.",
   keywords: [
     "code editor theme",
     "vscode theme",
@@ -48,7 +47,7 @@ export const metadata: Metadata = {
   creator: "SymphoneIceAttack",
   publisher: "ThemeCraft",
   generator: "ThemeCraft v2.0",
-  applicationName: "ThemeCraft - Code Theme Editor",
+  applicationName: "ThemeCraft - Code Editor Theme Creator",
 
   // SEO & Indexing
   robots: {
@@ -68,9 +67,9 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://themecraft.top",
-    title: "ThemeCraft - Professional Code Theme Editor",
+    title: "ThemeCraft - Code Editor Theme Creator",
     description:
-      "Universal code editor theme creator with live preview. Create, customize, and export beautiful color themes for VSCode, Cursor, Zed, Neovim, and Helix.",
+      "Create and customize code editor themes for VSCode, Cursor, Zed, Neovim, and Helix. Visual theme editor with live preview and multi-export support.",
     siteName: "ThemeCraft",
     images: [
       {
@@ -85,9 +84,9 @@ export const metadata: Metadata = {
   // Twitter Card
   twitter: {
     card: "summary_large_image",
-    title: "ThemeCraft - Code Theme Editor",
+    title: "ThemeCraft - Code Editor Theme Creator",
     description:
-      "Create stunning themes for VSCode, Cursor, Zed, Neovim & Helix with live preview and multi-export support.",
+      "Create beautiful themes for VSCode, Cursor, Zed, Neovim & Helix with live preview. Visual editor for code editor themes.",
     creator: "@symphoneiceattack",
     images: ["/og-image.jpg"],
   },

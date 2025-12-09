@@ -245,13 +245,13 @@ export const StructuredData: React.FC = () => {
       {
         "@type": "Service",
         "@id": "https://themecraft.top/#service",
-        name: "Theme Design & Development Service",
+        name: "Code Editor Theme Design Service",
         description:
-          "Professional theme design and development services for code editors with custom color schemes, syntax highlighting, and UI customization",
+          "Professional code editor theme design services for VSCode, Cursor, Zed, Neovim, and Helix with custom color schemes and syntax highlighting",
         provider: {
           "@id": "https://themecraft.top/#organization",
         },
-        serviceType: "Theme Design",
+        serviceType: "Code Editor Theme Design",
         audience: {
           "@type": "Audience",
           audienceType: ["Developers", "Theme Designers", "Code Editor Users"],
