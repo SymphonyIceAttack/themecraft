@@ -4,6 +4,7 @@
 User-agent: *
 Allow: /
 Disallow: /api/
+Disallow: /posts/
 
 # Sitemap location
 Sitemap: https://themecraft.top/sitemap.xml
