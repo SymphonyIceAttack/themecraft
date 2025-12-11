@@ -5,6 +5,7 @@ User-agent: *
 Allow: /
 Disallow: /api/
 Disallow: /posts/
+Allow: /posts/create-your-first-code-editor-theme-theme-craft
 
 # Sitemap location
 Sitemap: https://themecraft.top/sitemap.xml
